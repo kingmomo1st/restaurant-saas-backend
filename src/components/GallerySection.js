@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./css/gallery.css";
+
 import decor1 from "../components/picture2.0/ItalianArt1.jpg";
 import decor2 from "../components/picture2.0/ItalianArt2.jpg";
 import decor3 from "../components/picture2.0/ItalianArt3.jpg";
@@ -22,27 +23,19 @@ const GallerySection = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % galleryImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    if (!el) return;
 
-    requestAnimationFrame(() => {
-      const images = sectionRef.current.querySelectorAll("img");
-
-      if (!images.length) return;
-
+    setTimeout(() => {
       const ctx = gsap.context(() => {
-        gsap.set(images, { opacity: 0, y: 30 });
+        const items = el.querySelectorAll(".gallery-heading, .gallery-item img, .gallery-caption");
 
-        gsap.to(images, {
+        gsap.set(items, { opacity: 0, y: 40 });
+
+        gsap.to(items, {
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: el,
             start: "top 85%",
           },
           opacity: 1,
@@ -51,16 +44,16 @@ const GallerySection = () => {
           stagger: 0.2,
           ease: "power2.out",
         });
-      }, sectionRef);
+      }, el);
 
       ScrollTrigger.refresh();
 
       return () => ctx.revert();
-    });
+    }, 100);
   }, []);
 
   return (
-    <section className="gallery-section show-now" ref={sectionRef}>
+    <section className="gallery-section" ref={sectionRef}>
       <h2 className="gallery-heading">A Taste of Italy</h2>
       <div className="gallery-item">
         {galleryImages.map((img, index) => (

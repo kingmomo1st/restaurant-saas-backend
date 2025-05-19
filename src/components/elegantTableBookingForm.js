@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { firestore as db } from "../firebase";
 import { collection, Timestamp, serverTimestamp, query, where, getDocs } from "firebase/firestore";
-import sendConfirmationEmail from "../Services/emailService";
 import { MAX_BOOKING_PER_SLOT, TIME_OPTIONS } from "./constant";
 import DatePicker from "react-datepicker";
 import { useNavigate } from "react-router-dom";
@@ -91,8 +90,11 @@ const ElegantTableBookingForm = () => {
 
       if (!res.ok) throw new Error("Failed to submit");
 
+      /*
       await sendConfirmationEmail(trimmedData.email);
+      */
 
+      
       setFormData({ name: "", email: "", phone: "", guests: 1, date: "", time: "" });
       setSuccessMessage("Reservation confirmed! Redirecting...");
       setTimeout(() => navigate("/"), 2500);

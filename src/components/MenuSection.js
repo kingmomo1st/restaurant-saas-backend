@@ -14,37 +14,33 @@ function urlFor(source) {
 }
 
 const MenuSection = ({ section }) => {
-  const sectionRef = useRef();
+  const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    if (!el) return;
 
-    requestAnimationFrame(() => {
-      const el = sectionRef.current;
-      const cards = el.querySelectorAll(".menu-category-card");
+    const cards = el.querySelectorAll(".menu-category-card");
+    if (!cards.length) return;
 
-      if (!cards.length) return;
+    const ctx = gsap.context(() => {
+      gsap.set(cards, { opacity: 0, y: 30 });
 
-      const ctx = gsap.context(() => {
-        gsap.set(cards, { opacity: 0, y: 30 });
+      gsap.to(cards, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+    }, sectionRef);
 
-        gsap.to(cards, {
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-          },
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          stagger: 0.2,
-          ease: "power2.out",
-        });
-      }, el);
-
-      ScrollTrigger.refresh();
-      return () => ctx.revert();
-    });
-  }, []);
+    return () => ctx.revert();
+  }, [section]);
 
   return (
     <section className="menu-selection-section" ref={sectionRef}>

@@ -16,28 +16,32 @@ const VibeSection = ({ data }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    if (!el) return;
 
-    const images = sectionRef.current.querySelectorAll("img");
-    if (!images.length) return;
+    setTimeout(() => {
+      const ctx = gsap.context(() => {
+        const images = el.querySelectorAll("img");
 
-    const ctx = gsap.context(() => {
-      gsap.set(images, { opacity: 0, y: 40 });
+        gsap.set(images, { opacity: 0, y: 40 });
 
-      gsap.to(images, {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 85%",
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power3.out",
-      });
-    }, sectionRef);
+        gsap.to(images, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "power2.out",
+        });
+      }, el);
 
-    return () => ctx.revert();
+      ScrollTrigger.refresh();
+
+      return () => ctx.revert();
+    }, 100);
   }, []);
 
   return (

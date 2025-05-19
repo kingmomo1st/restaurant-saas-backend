@@ -9,30 +9,35 @@ const WelcomeSection = ({ data }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    if (!el) return;
 
-    const h2 = sectionRef.current.querySelector(".welcome-text h2");
-    const ps = sectionRef.current.querySelectorAll(".welcome-text p");
-    const buttons = sectionRef.current.querySelectorAll(".btn-group .btn");
+    setTimeout(() => {
+      const ctx = gsap.context(() => {
+        const container = el.querySelector(".welcome-container");
+        const elements = container?.querySelectorAll("h2, p, .btn");
 
-    if (!h2 || ps.length === 0 || buttons.length === 0) return;
+        if (elements) {
+          gsap.set(elements, { opacity: 0, y: 30 });
 
-    const ctx = gsap.context(() => {
-      gsap.set([h2, ...ps, ...buttons], { opacity: 0, y: 40 });
+          gsap.to(elements, {
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power2.out",
+          });
+        }
+      }, el);
 
-      gsap.timeline({
-        defaults: { ease: "power3.out" },
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      })
-        .to(h2, { opacity: 1, y: 0, duration: 1 })
-        .to(ps, { opacity: 1, y: 0, duration: 0.6, stagger: 0.15 }, "-=0.5")
-        .to(buttons, { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 }, "-=0.4");
-    }, sectionRef);
+      ScrollTrigger.refresh();
 
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }, 100);
   }, []);
 
   return (

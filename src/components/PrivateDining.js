@@ -17,40 +17,32 @@ const PrivateDining = ({ data }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
-
     const el = sectionRef.current;
-    const images = el.querySelectorAll("img");
-    const paragraphs = el.querySelectorAll("p");
-    const title = el.querySelector(".section-heading");
-    const button = el.querySelector(".btn-outline");
+    if (!el) return;
 
-    const allElements = [
-      title,
-      ...paragraphs,
-      ...(button ? [button] : []),
-      ...images
-    ].filter(Boolean); // Remove null/undefined
+    setTimeout(() => {
+      const ctx = gsap.context(() => {
+        const elements = el.querySelectorAll("h2, p, a, img");
 
-    if (!allElements.length) return;
+        gsap.set(elements, { opacity: 0, y: 40 });
 
-    const ctx = gsap.context(() => {
-      gsap.set(allElements, { opacity: 0, y: 40 });
+        gsap.to(elements, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "power2.out",
+        });
+      }, el);
 
-      gsap.to(allElements, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power2.out",
-      });
-    }, el);
+      ScrollTrigger.refresh();
 
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }, 100);
   }, []);
 
   return (

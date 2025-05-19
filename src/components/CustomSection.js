@@ -17,33 +17,32 @@ const CustomSection = ({ data }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    if (!el) return;
 
-    requestAnimationFrame(() => {
-      const images = sectionRef.current.querySelectorAll("img");
-      const title = sectionRef.current.querySelector("h2");
-      const blocks = sectionRef.current.querySelectorAll("p");
-
+    setTimeout(() => {
       const ctx = gsap.context(() => {
-        gsap.set([title, ...blocks, ...images], { opacity: 0, y: 30 });
+        const elements = el.querySelectorAll("h2, p, img");
 
-        gsap.to([title, ...blocks, ...images], {
+        gsap.set(elements, { opacity: 0, y: 40 });
+
+        gsap.to(elements, {
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: el,
             start: "top 85%",
           },
           opacity: 1,
           y: 0,
           duration: 1.2,
-          stagger: 0.2,
+          stagger: 0.15,
           ease: "power2.out",
         });
-      }, sectionRef);
+      }, el);
 
       ScrollTrigger.refresh();
 
       return () => ctx.revert();
-    });
+    }, 100);
   }, [data]);
 
   return (

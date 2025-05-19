@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./css/Home.css";
 import "./css/PrivateDining.css";
 import { Link } from "react-router-dom";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
 import imageUrlBuilder from "@sanity/image-url";
 import sanityClient from "../sanity/sanityClient.ts";
+// Sections
+import HeroSection from "./HeroSection";
+import WelcomeSection from "./WelcomeSection";
+import MenuSection from "./MenuSection";
+import GallerySection from "./GallerySection";
+import VibeSection from "./VibeSection";
+import CustomSection from "./CustomSection";
+import PrivateDining from "./PrivateDining";
 
-import HeroSection from "./HeroSection.js";
-import WelcomeSection from "./WelcomeSection.js";
-import MenuSection from "./MenuSection.js";
-import GallerySection from "./GallerySection.js";
-import VibeSection from "./VibeSection.js";
-import CustomSection from "./CustomSection.js";
-import PrivateDining from "./PrivateDining.js";
 
-gsap.registerPlugin(ScrollTrigger); // <-- Put this AFTER all imports
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
+// Image builder for Sanity
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
 }
+
 
 const Home = () => {
   const [homepageData, setHomepageData] = useState(null);
@@ -30,16 +33,16 @@ const Home = () => {
     const fetchCMS = async () => {
       const data = await sanityClient.fetch(`*[_type == "homepage"][0]`);
       setHomepageData(data);
-      console.log("CMS Data Fetched:", data); // okay to log here
+      console.log("CMS Data Fetched:", data);
     };
     fetchCMS();
   }, []);
-  
+
   useEffect(() => {
     if (homepageData?.sections?.length) {
       setTimeout(() => {
-        ScrollTrigger.refresh();  // Forces GSAP to detect all triggers
-      }, 500); // Delay to let components mount
+        ScrollTrigger.refresh(); // Ensures ScrollTrigger catches all sections
+      }, 300); // Slight delay gives React time to mount components
     }
   }, [homepageData]);
 
