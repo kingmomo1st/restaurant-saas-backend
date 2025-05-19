@@ -1,0 +1,87 @@
+.giftcard-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--light-cream);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    font-family: var(--body-font);
+  }
+  
+  .giftcard-container h2 {
+    font-size: 32px;
+    color: var(--deep-red);
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+    text-align: center;
+  }
+  
+  .giftcard-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--charcoal);
+    font-size: 16px;
+  }
+  
+  .giftcard-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .giftcard-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+  
+  .giftcard-form input,
+  .giftcard-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    transition: border-color 0.3s ease;
+  }
+  
+  .giftcard-form input:focus,
+  .giftcard-form textarea:focus {
+    border-color: var(--deep-red);
+    outline: none;
+  }
+  
+  .giftcard-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .giftcard-submit {
+    background-color: var(--gold);
+    color: #1a1a1a;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .giftcard-submit:hover {
+    background-color: var(--deep-red);
+    color: white;
+  }
+  
+  .success-msg {
+    color: green;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+  
+  .error-msg {
+    color: red;
+    margin-top: 15px;
+    font-weight: 500;
+  }

@@ -1,0 +1,94 @@
+/* CartIcon.css */
+
+/* General cart icon style */
+.cart-icon {
+  position: relative; /* Needed to position the count badge */
+  display: inline-block; /* Makes sure it sits well with other elements */
+  font-size: 24px; /* Icon size */
+}
+
+/* Style for the cart icon itself */
+.cart-icon i {
+  color: #333; /* Icon color */
+  cursor: pointer; /* Makes it clickable */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the cart icon */
+.cart-icon i:hover {
+  color: #f39c12; /* Change color when hovered (e.g., gold) */
+}
+
+/* Cart count badge */
+.cart-count {
+  position: absolute; /* Positioning it relative to the parent .cart-icon */
+  top: -5px; /* Move the badge up */
+  right: -5px; /* Move the badge to the right */
+  background-color: red; /* Badge background color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circle shape */
+  padding: 5px 10px; /* Padding inside the badge */
+  font-size: 12px; /* Font size for the number */
+  font-weight: bold; /* Bold font for the number */
+  min-width: 20px; /* Minimum width to make it a decent circle */
+  height: 20px; /* Same as the width for a circular shape */
+  display: flex; /* Flexbox to center the number */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Optional: Add some spacing between the cart icon and the cart count */
+.cart-icon i + .cart-count {
+  margin-top: 5px; /* Adjust if you want space between icon and count */
+}
+
+/* Empty Cart Message */
+.empty-cart {
+text-align: center;
+margin-top: 50px;
+}
+
+/* Cart Item Layout */
+.cart-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+/* Item Image */
+.cart-item-image {
+width: 80px;
+height: 80px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+/* Clear Cart Button */
+.clear-cart-button {
+padding: 8px 16px;
+background-color: #e74c3c;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.clear-cart-button:hover {
+background-color: #c0392b;
+}
+
+/* Back to Menu Button */
+.back-to-menu-btn {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #3498db;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+.back-to-menu-btn:hover {
+background-color: #2980b9;
+}

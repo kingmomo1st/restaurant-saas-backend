@@ -1,0 +1,185 @@
+.order-online-container {
+    font-family: 'Merriweather', serif; /* Elegant serif font for the Italian feel */
+    background-color: #f5f5f5;
+    padding: 40px;
+    color: #333;
+  }
+  
+  .order-online-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .order-online-header h1 {
+    font-size: 3rem;
+    color: #B84D47; /* Italian Red */
+  }
+  
+  .order-online-header p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .order-online-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .order-online-categories button {
+    background: none;
+    border: 2px solid #B84D47;
+    color: #B84D47;
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .order-online-categories button:hover,
+  .order-online-categories button.active {
+    background-color: #B84D47;
+    color: white;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.5rem;
+    color: #B84D47;
+  }
+  
+  .menu-item p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #B84D47;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #8F3B2E;
+  }
+  
+  .cart-summary {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-summary h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #B84D47;
+  }
+  
+  .cart-summary .total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn {
+    background-color: #B84D47;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #8F3B2E;
+  }
+  
+  .back-btn {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-link {
+    color: #B84D47;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .back-link:hover {
+    color: #8F3B2E;
+  }
+
+  .wine-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .wine-options .add-to-cart-btn {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .wine-options .add-to-cart-btn:hover {
+    background-color: #8b1a1a;
+  }
+  /* ✅ FADE-IN animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Skeleton loader styling */
+.loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skeleton-item {
+  height: 320px;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #ecebeb 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  border-radius: 10px;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}

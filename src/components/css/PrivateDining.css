@@ -1,0 +1,92 @@
+/* Private Dining Section - General Layout */
+.private-dining-section {
+  font-family: var(--body-font);
+  color: var(--charcoal);
+  background-color: var(--light-cream);
+  padding-top: 80px; /* Added spacing to prevent navbar overlap */
+}
+
+.private-dining-container {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Inquire Now Button - Positioned Above Images */
+.btn-outline {
+  padding: 12px 40px;
+  border: 2px solid #9d2a2f;
+  background: transparent;
+  color: #9d2a2f;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 40px; /* Added space between paragraph and button */
+  margin-bottom: 40px; /* Added space between button and images */
+}
+
+.btn-outline:hover {
+  background-color: #9d2a2f;
+  color: #fff;
+}
+
+/* Image Gallery - Sfoglia Style */
+.image-gallery {
+  display: flex;
+  overflow-x: auto; /* Horizontal scrolling for images */
+  gap: 30px; /* Space between images */
+  margin-top: 40px;
+  justify-content: center; /* Centers the images horizontally */
+  scroll-snap-type: x mandatory; /* Smooth scroll */
+}
+
+.image-gallery img {
+  width: 90%; /* Allows for wide display of images */
+  height: auto;
+  max-width: 350px; /* Limit max width of images */
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+  object-fit: cover; /* Ensures the images maintain aspect ratio without distortion */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05); /* Slight scale-up effect for hover */
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Paragraph Styling */
+.private-dining-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .private-dining-container {
+    padding: 0 15px;
+  }
+
+  .section-heading {
+    font-size: 40px;
+  }
+
+  .private-dining-section p {
+    font-size: 16px;
+  }
+
+  .image-gallery {
+    gap: 20px; /* Reduced space between images on smaller screens */
+  }
+
+  .image-gallery img {
+    max-width: 100%; /* Makes the images more flexible for smaller screens */
+  }
+}

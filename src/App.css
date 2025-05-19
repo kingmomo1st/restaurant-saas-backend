@@ -1,0 +1,194 @@
+ /* Remove padding and margin from the entire page */
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+:root {
+  /* Color Palette */
+  --deep-red: #8B0000;
+  --olive-green: #708238;
+  --cream: #F8F5F0;
+  --charcoal: #2E2E2E;
+  --gold: #C0A060;
+
+  /* Typography */
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Lato', sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: var(--heading-font);
+  color: var(--deep-red);
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--deep-red);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+/* Navbar active link (optional) */
+.nav-link.active {
+  color: var(--gold);
+  font-weight: bold;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Sections */
+section {
+  padding: var(--section-padding) 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  transition: opacity 0.6s ease;
+}
+
+/* Buttons */
+button {
+  font-family: var(--body-font);
+  background-color: var(--deep-red);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--gold);
+  color: var(--charcoal);
+}
+
+/* App wrapper */
+.App {
+  text-align: center;
+}
+
+/* Scroll Button */
+.scroll-btn {
+  margin-top: 30px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-btn:hover {
+  background-color: white;
+  color: var(--deep-red);
+}
+
+/* Scroll Button Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--deep-red);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .menu-card-content h3 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .scroll-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+.italian-vibe-section {
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.vibe-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

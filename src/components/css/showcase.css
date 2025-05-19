@@ -1,0 +1,79 @@
+.showcase-section {
+  background-color: #fefaf6; /* Warm parchment tone */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.showcase-heading {
+  font-family: "Georgia", serif; /* Traditional serif for headings */
+  font-size: 36px;
+  color: var(--deep-red);
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase-card {
+  background: #fff;
+  border: 1px solid #e6ddd2; /* Soft border for vintage feel */
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards; /* Animation for fade-in and lift effect */
+}
+
+.showcase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.showcase-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.showcase-card:hover .showcase-img {
+  transform: scale(1.03);
+}
+
+.showcase-card h3 {
+  font-family: "Georgia", serif; /* Traditional serif for headings */
+  color: var(--charcoal);
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.showcase-card p {
+  font-size: 15.5px;
+  color: #555;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.btn {
+  font-family: var(--heading-font);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
