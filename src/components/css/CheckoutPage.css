@@ -22,6 +22,9 @@
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px; /* prevents zoom on mobile */
   }
   
   .cart-summary {
@@ -48,4 +51,9 @@
   
   button[type="submit"]:hover {
     background-color: #276749;
+  }
+  .checkout-container input,
+  .checkout-form input {
+    color: #333 !important;
+    background-color: #fff !important;
   }

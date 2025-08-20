@@ -1,0 +1,725 @@
+/* AdminActiveSubscriptions.css */
+
+/* CSS Variables with Fallbacks */
+:root {
+   /* Color Palette */
+   --deep-red: #8B0000;
+   --olive-green: #708238;
+   --cream: #F8F5F0;
+   --charcoal: #2E2E2E;
+   --gold: #C0A060;
+ 
+   /* Typography */
+   --heading-font: 'Playfair Display', serif;
+   --body-font: 'Lato', sans-serif;
+ 
+    }
+    
+    .admin-subscriptions {
+    padding: 20px;
+    background-color: #F8F5F0;
+    font-family: ‘Inter’, sans-serif;
+    color: #2E2E2E;
+    min-height: 100vh;
+    }
+    
+    /* Header Section */
+    .subscriptions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 24px;
+    background: linear-gradient(135deg, white 0%, #F8F5F0 100%);
+    border: 2px solid #C0A060;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    
+    .subscriptions-header h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #8B0000;
+    font-family: ‘Playfair Display’, serif;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.1);
+    }
+    
+    .refresh-btn {
+    background: linear-gradient(135deg, #708238 0%, #5a6b2a 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+    font-family: ‘Inter’, sans-serif !important;
+    box-shadow: 0 4px 12px rgba(112, 130, 56, 0.3) !important;
+    text-transform: none !important;
+    }
+    
+    .refresh-btn:hover {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4) !important;
+    }
+    
+    /* Dashboard Metrics */
+    .dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, white 0%, #F8F5F0 100%);
+    border: 2px solid #C0A060;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    
+    .metric-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid #C0A060;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    }
+    
+    .metric-card::before {
+    content: ‘’;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #C0A060, #8B0000);
+    }
+    
+    .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(192, 160, 96, 0.3);
+    border-color: #8B0000;
+    }
+    
+    .metric-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C0A060 0%, #a68b45 100%);
+    color: white;
+    }
+    
+    .metric-icon svg {
+    font-size: 24px !important;
+    }
+    
+    .metric-content {
+    flex: 1;
+    }
+    
+    .metric-content strong {
+    display: block;
+    font-family: ‘Playfair Display’, serif;
+    color: #8B0000;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    }
+    
+    .metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E2E2E;
+    font-family: ‘Playfair Display’, serif;
+    }
+    
+    .metric-card.revenue {
+    background: linear-gradient(135deg, #e6fff2 0%, #f0fff4 100%);
+    border-color: #708238;
+    }
+    
+    .metric-card.revenue .metric-icon {
+    background: linear-gradient(135deg, #708238 0%, #5a6b2a 100%);
+    }
+    
+    .metric-card.average {
+    background: linear-gradient(135deg, #fff8e6 0%, #fffcf0 100%);
+    border-color: #C0A060;
+    }
+    
+    .metric-card.plan {
+    background: linear-gradient(135deg, #e6f3ff 0%, #f0f8ff 100%);
+    border-color: #2196F3;
+    }
+    
+    .metric-card.plan .metric-icon {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    }
+    
+    .metric-card.cancelled {
+    background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%);
+    border-color: #8B0000;
+    }
+    
+    .metric-card.cancelled .metric-icon {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%);
+    }
+    
+    /* Subscription Controls */
+    .subscription-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding: 24px;
+    background: linear-gradient(135deg, white 0%, #F8F5F0 100%);
+    border: 2px solid #C0A060;
+    border-radius: 12px;
+    align-items: flex-end;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    
+    .search-input {
+    min-width: 250px !important;
+    flex: 1;
+    }
+    
+    .search-input .MuiOutlinedInput-root {
+    border-radius: 8px !important;
+    background: white !important;
+    font-family: ‘Inter’, sans-serif !important;
+    }
+    
+    .search-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #C0A060 !important;
+    }
+    
+    .search-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #C0A060 !important;
+    border-width: 2px !important;
+    }
+    
+    .filter-select {
+    min-width: 150px !important;
+    }
+    
+    .filter-select .MuiOutlinedInput-root {
+    border-radius: 8px !important;
+    background: white !important;
+    font-family: ‘Inter’, sans-serif !important;
+    }
+    
+    .filter-select .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #C0A060 !important;
+    }
+    
+    .filter-select .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #C0A060 !important;
+    border-width: 2px !important;
+    }
+    
+    .export-btn {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%) !important;
+    color: white !important;
+    border: 2px solid #8B0000 !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+    font-family: ‘Inter’, sans-serif !important;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3) !important;
+    text-transform: none !important;
+    }
+    
+    .export-btn:hover {
+    background: linear-gradient(135deg, #C0A060 0%, #a68b45 100%) !important;
+    border-color: #C0A060 !important;
+    color: #2E2E2E !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(192, 160, 96, 0.4) !important;
+    }
+    
+    /* No Subscriptions State */
+    .no-subscriptions {
+    text-align: center;
+    padding: 80px 30px;
+    background: linear-gradient(135deg, white 0%, #F8F5F0 100%);
+    border: 2px solid #C0A060;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    
+    .no-subscriptions h3 {
+    color: #8B0000;
+    font-family: ‘Playfair Display’, serif;
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.1);
+    }
+    
+    .no-subscriptions p {
+    color: #2E2E2E;
+    font-size: 16px;
+    margin: 12px 0;
+    line-height: 1.6;
+    }
+    
+    /* Table Wrapper */
+    .table-wrapper {
+    background: white;
+    border: 2px solid #C0A060;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    overflow: hidden;
+    }
+    
+    /* Table Styling */
+    .subscriptions-table {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    }
+    
+    .subscriptions-table .MuiTableHead-root {
+    background: linear-gradient(135deg, #F8F5F0 0%, #f5f2ed 100%) !important;
+    }
+    
+    .subscriptions-table .MuiTableCell-head {
+    font-weight: 600 !important;
+    color: #2E2E2E !important;
+    font-size: 15px !important;
+    font-family: ‘Playfair Display’, serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid #C0A060 !important;
+    padding: 18px 20px !important;
+    }
+    
+    .subscriptions-table .MuiTableCell-body {
+    color: #2E2E2E !important;
+    line-height: 1.5 !important;
+    padding: 18px 20px !important;
+    font-family: ‘Inter’, sans-serif !important;
+    border-bottom: 1px solid #eee !important;
+    }
+    
+    .subscription-row:hover {
+    background: linear-gradient(135deg, #fdf5f0 0%, #fff8f2 100%) !important;
+    transform: scale(1.002);
+    transition: all 0.2s ease;
+    }
+    
+    /* Customer Info */
+    .customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    }
+    
+    .customer-info strong {
+    font-size: 15px;
+    color: #8B0000;
+    font-family: ‘Playfair Display’, serif;
+    font-weight: 600;
+    }
+    
+    .user-id {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    }
+    
+    /* Plan Chips */
+    .plan-chip {
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    }
+    
+    .plan-starter {
+    background: linear-gradient(135deg, #e6f3ff 0%, #f0f8ff 100%) !important;
+    color: #2196F3 !important;
+    border: 1px solid #2196F3 !important;
+    }
+    
+    .plan-pro {
+    background: linear-gradient(135deg, #fff8e6 0%, #fffcf0 100%) !important;
+    color: #C0A060 !important;
+    border: 1px solid #C0A060 !important;
+    }
+    
+    .plan-elite {
+    background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%) !important;
+    color: #8B0000 !important;
+    border: 1px solid #8B0000 !important;
+    }
+    
+    .plan-basic {
+    background: linear-gradient(135deg, #f0f0f0 0%, #f8f8f8 100%) !important;
+    color: #2E2E2E !important;
+    border: 1px solid #2E2E2E !important;
+    }
+    
+    /* Status Chips */
+    .status-chip {
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    }
+    
+    .status-active {
+    background: linear-gradient(135deg, #e6fff2 0%, #f0fff4 100%) !important;
+    color: #708238 !important;
+    border: 1px solid #708238 !important;
+    }
+    
+    .status-canceled {
+    background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%) !important;
+    color: #8B0000 !important;
+    border: 1px solid #8B0000 !important;
+    }
+    
+    .status-past_due {
+    background: linear-gradient(135deg, #fff8e6 0%, #fffcf0 100%) !important;
+    color: #C0A060 !important;
+    border: 1px solid #C0A060 !important;
+    }
+    
+    .status-incomplete {
+    background: linear-gradient(135deg, #e6f3ff 0%, #f0f8ff 100%) !important;
+    color: #2196F3 !important;
+    border: 1px solid #2196F3 !important;
+    }
+    
+    /* Action Buttons */
+    .action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    }
+    
+    .view-btn {
+    background: linear-gradient(135deg, #C0A060 0%, #a68b45 100%) !important;
+    color: #2E2E2E !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .view-btn:hover {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3) !important;
+    }
+    
+    .cancel-btn {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%) !important;
+    color: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .cancel-btn:hover {
+    background: linear-gradient(135deg, #cc0000 0%, #990000 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.4) !important;
+    }
+    
+    .resume-btn {
+    background: linear-gradient(135deg, #708238 0%, #5a6b2a 100%) !important;
+    color: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .resume-btn:hover {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3) !important;
+    }
+    
+    /* Pagination */
+    .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #F8F5F0;
+    }
+    
+    .subscription-pagination .MuiPaginationItem-root {
+    color: #2E2E2E !important;
+    border-color: #C0A060 !important;
+    font-family: ‘Inter’, sans-serif !important;
+    }
+    
+    .subscription-pagination .MuiPaginationItem-root:hover {
+    background-color: rgba(192, 160, 96, 0.1) !important;
+    }
+    
+    .subscription-pagination .MuiPaginationItem-root.Mui-selected {
+    background: linear-gradient(135deg, #C0A060 0%, #a68b45 100%) !important;
+    color: #2E2E2E !important;
+    border-color: #C0A060 !important;
+    }
+    
+    /* Dialog Styling */
+    .details-dialog .MuiDialog-paper {
+    border-radius: 12px !important;
+    border: 2px solid #C0A060 !important;
+    }
+    
+    .details-dialog .MuiDialogTitle-root {
+    background: linear-gradient(135deg, #F8F5F0 0%, #f5f2ed 100%) !important;
+    color: #8B0000 !important;
+    font-family: ‘Playfair Display’, serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #C0A060 !important;
+    }
+    
+    .subscription-details {
+    padding: 20px 0;
+    }
+    
+    .subscription-details strong {
+    color: #8B0000;
+    font-family: ‘Playfair Display’, serif;
+    font-weight: 600;
+    }
+    
+    .cancel-dialog .MuiDialog-paper {
+    border-radius: 12px !important;
+    border: 2px solid #8B0000 !important;
+    }
+    
+    .cancel-dialog .MuiDialogTitle-root {
+    background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%) !important;
+    color: #8B0000 !important;
+    font-family: ‘Playfair Display’, serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #8B0000 !important;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+    .admin-subscriptions {
+    padding: 15px;
+    }
+    
+    .subscriptions-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    .subscriptions-header h2 {
+    font-size: 26px;
+    }
+    
+    .refresh-btn {
+    width: 100% !important;
+    }
+    
+    .dashboard-metrics {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    }
+    
+    .metric-card {
+    padding: 16px;
+    }
+    
+    .metric-icon {
+    width: 40px;
+    height: 40px;
+    }
+    
+    .metric-icon svg {
+    font-size: 20px !important;
+    }
+    
+    .metric-value {
+    font-size: 20px;
+    }
+    
+    .subscription-controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    }
+    
+    .search-input,
+    .filter-select,
+    .export-btn {
+    width: 100% !important;
+    min-width: auto !important;
+    }
+    
+    .subscriptions-table .MuiTableCell-head,
+    .subscriptions-table .MuiTableCell-body {
+    padding: 12px 8px !important;
+    font-size: 12px !important;
+    }
+    
+    .customer-info strong {
+    font-size: 13px;
+    }
+    
+    .user-id {
+    font-size: 10px;
+    }
+    
+    .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+    }
+    
+    .view-btn,
+    .cancel-btn,
+    .resume-btn {
+    width: 32px !important;
+    height: 32px !important;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .admin-subscriptions {
+    padding: 10px;
+    }
+    
+    .subscriptions-header {
+    padding: 16px;
+    }
+    
+    .subscriptions-header h2 {
+    font-size: 22px;
+    }
+    
+    .dashboard-metrics {
+    padding: 16px;
+    }
+    
+    .metric-card {
+    padding: 12px;
+    }
+    
+    .metric-content strong {
+    font-size: 12px;
+    }
+    
+    .metric-value {
+    font-size: 18px;
+    }
+    
+    .subscriptions-table .MuiTableCell-head,
+    .subscriptions-table .MuiTableCell-body {
+    padding: 8px 4px !important;
+    font-size: 11px !important;
+    }
+    }
+    
+    /* Print Styles */
+    @media print {
+    .admin-subscriptions {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #000;
+    }
+    
+    .subscription-controls,
+    .action-buttons,
+    .refresh-btn,
+    .export-btn,
+    .pagination-wrapper {
+    display: none;
+    }
+    
+    .subscriptions-header {
+    background: white;
+    border: 1px solid #000;
+    }
+    
+    .dashboard-metrics {
+    background: white;
+    border: 1px solid #000;
+    }
+    
+    .metric-card {
+    background: white;
+    border: 1px solid #000;
+    }
+    }
+    
+    /* Focus Styles for Accessibility */
+    .refresh-btn:focus,
+    .export-btn:focus {
+    outline: 2px solid #8B0000 !important;
+    outline-offset: 2px !important;
+    }
+    
+    .view-btn:focus,
+    .cancel-btn:focus,
+    .resume-btn:focus {
+    outline: 2px solid #8B0000 !important;
+    outline-offset: 1px !important;
+    }
+    
+    /* High Contrast Mode Support */
+    @media (prefers-contrast: high) {
+    .metric-card {
+    border-width: 3px;
+    }
+    
+    .plan-chip,
+    .status-chip {
+    border-width: 2px !important;
+    font-weight: 700 !important;
+    }
+    }
+    
+    /* Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+    .metric-card,
+    .view-btn,
+    .cancel-btn,
+    .resume-btn,
+    .refresh-btn,
+    .export-btn {
+    transition: none !important;
+    }
+    
+    .subscription-row:hover {
+    transform: none !important;
+    }
+    }

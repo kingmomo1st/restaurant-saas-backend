@@ -1,0 +1,522 @@
+/* AdminPOSPanel.css */
+
+.admin-pos-panel {
+  padding: 20px;
+  background-color: var(–cream);
+  font-family: var(–body-font);
+  }
+  
+  /* Header Section */
+  .pos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .pos-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  letter-spacing: 0.5px;
+  }
+  
+  .header-actions {
+  display: flex;
+  gap: 12px;
+  }
+  
+  .refresh-btn {
+  background-color: var(–olive-green);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .refresh-btn:hover {
+  background-color: var(–deep-red);
+  transform: translateY(-1px);
+  }
+  
+  .cleanup-btn {
+  background-color: var(–deep-red);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .cleanup-btn:hover {
+  background-color: #660000;
+  transform: translateY(-1px);
+  }
+  
+  /* No Franchise Selected State */
+  .no-franchise-selected {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .no-franchise-selected h3 {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  font-size: 24px;
+  margin-bottom: 16px;
+  }
+  
+  .no-franchise-selected p {
+  color: var(–charcoal);
+  font-size: 16px;
+  }
+  
+  /* Dashboard Metrics */
+  .dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .metric-card {
+  text-align: center;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: var(–cream);
+  border: 1px solid var(–gold);
+  transition: transform 0.3s ease;
+  }
+  
+  .metric-card:hover {
+  transform: translateY(-2px);
+  }
+  
+  .metric-card strong {
+  display: block;
+  font-family: var(–heading-font);
+  color: var(–deep-red);
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  }
+  
+  .metric-card.success {
+  background-color: #e6fff2;
+  border-color: var(–olive-green);
+  }
+  
+  .metric-card.failed {
+  background-color: #ffe6e6;
+  border-color: var(–deep-red);
+  }
+  
+  .metric-card.rate {
+  background-color: #fff8e6;
+  border-color: var(–gold);
+  }
+  
+  .metric-card.revenue {
+  background-color: #f0f8f0;
+  border-color: var(–olive-green);
+  }
+  
+  .metric-card.avg {
+  background-color: #fff8e6;
+  border-color: var(–gold);
+  }
+  
+  /* Recent Failures Alert */
+  .recent-failures-alert {
+  background-color: #ffe6e6;
+  border: 2px solid var(–deep-red);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .recent-failures-alert h3 {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  margin-bottom: 16px;
+  font-size: 20px;
+  }
+  
+  .failure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  }
+  
+  .failure-item {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid var(–deep-red);
+  }
+  
+  .failure-item strong {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  }
+  
+  .failure-error {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+  }
+  
+  /* POS Controls */
+  .pos-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .pos-controls input[type=“text”],
+  .pos-controls input[type=“date”],
+  .pos-controls select {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: var(–body-font);
+  transition: border-color 0.3s ease;
+  min-width: 160px;
+  }
+  
+  .pos-controls input[type=“text”]:focus,
+  .pos-controls input[type=“date”]:focus,
+  .pos-controls select:focus {
+  outline: none;
+  border-color: var(–gold);
+  box-shadow: 0 0 0 2px rgba(192, 160, 96, 0.2);
+  }
+  
+  .export-btn {
+  background-color: var(–deep-red);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .export-btn:hover {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  transform: translateY(-1px);
+  }
+  
+  /* No Logs State */
+  .no-logs {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .no-logs h3 {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  font-size: 22px;
+  margin-bottom: 12px;
+  }
+  
+  .no-logs p {
+  color: var(–charcoal);
+  font-size: 16px;
+  }
+  
+  /* Table Styling */
+  .table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  }
+  
+  .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 1000px;
+  font-family: var(–body-font);
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  }
+  
+  .admin-table th {
+  background-color: var(–cream);
+  font-weight: 600;
+  color: var(–charcoal);
+  font-size: 15px;
+  font-family: var(–heading-font);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  }
+  
+  .admin-table td {
+  color: var(–charcoal);
+  line-height: 1.4;
+  }
+  
+  .admin-table tr:hover {
+  background-color: #fdf5f0;
+  }
+  
+  /* Failed Row Highlighting */
+  .failed-row {
+  background-color: #ffe6e6 !important;
+  border-left: 4px solid var(–deep-red);
+  }
+  
+  .failed-row:hover {
+  background-color: #ffcccc !important;
+  }
+  
+  /* Status Badges */
+  .status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  }
+  
+  .status-success {
+  background-color: #e6fff2;
+  color: var(–olive-green);
+  border: 1px solid var(–olive-green);
+  }
+  
+  .status-failed {
+  background-color: #ffe6e6;
+  color: var(–deep-red);
+  border: 1px solid var(–deep-red);
+  }
+  
+  /* Error Message Display */
+  .error-message {
+  font-size: 11px;
+  color: var(–deep-red);
+  margin-top: 4px;
+  font-style: italic;
+  background-color: #ffe6e6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(–deep-red);
+  }
+  
+  /* Time Display */
+  .time-ago {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+  font-style: italic;
+  }
+  
+  .last-retry {
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+  }
+  
+  /* Transaction ID Code */
+  .admin-table code {
+  background-color: var(–cream);
+  color: var(–charcoal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: ‘Courier New’, monospace;
+  font-size: 12px;
+  border: 1px solid var(–gold);
+  }
+  
+  /* Retry Button */
+  .retry-btn {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .retry-btn:hover {
+  background-color: var(–deep-red);
+  color: white;
+  transform: translateY(-1px);
+  }
+  
+  /* Loading State */
+  .admin-pos-panel > p {
+  text-align: center;
+  padding: 40px;
+  color: var(–charcoal);
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+  .admin-pos-panel {
+  padding: 15px;
+  }
+  
+  .pos-header {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  }
+  
+  .pos-header h2 {
+  font-size: 22px;
+  }
+  
+  .header-actions {
+  flex-direction: column;
+  width: 100%;
+  }
+  
+  .header-actions button {
+  width: 100%;
+  }
+  
+  .dashboard-metrics {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  }
+  
+  .pos-controls {
+  flex-direction: column;
+  align-items: stretch;
+  }
+  
+  .pos-controls input,
+  .pos-controls select,
+  .pos-controls button {
+  min-width: auto;
+  width: 100%;
+  }
+  
+  .failure-list {
+  gap: 8px;
+  }
+  
+  .failure-item {
+  padding: 10px 12px;
+  }
+  
+  .admin-table {
+  font-size: 12px;
+  min-width: 800px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 10px 8px;
+  }
+  
+  .status-badge {
+  font-size: 10px;
+  padding: 3px 6px;
+  }
+  
+  .retry-btn {
+  font-size: 10px;
+  padding: 4px 8px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .admin-pos-panel {
+  padding: 10px;
+  }
+  
+  .dashboard-metrics {
+  grid-template-columns: 1fr;
+  padding: 15px;
+  }
+  
+  .metric-card {
+  padding: 12px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 8px 6px;
+  }
+  
+  .error-message {
+  font-size: 10px;
+  }
+  
+  .time-ago,
+  .last-retry {
+  display: none;
+  }
+  }

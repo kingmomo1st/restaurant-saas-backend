@@ -1,0 +1,288 @@
+/* ElegantMenuSalumeria.css */
+
+.elegant-menu-container {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+    color: white;
+  }
+  
+  .elegant-menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+  
+  .elegant-menu-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  /* Navigation Header */
+  .elegant-menu-nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+  
+  .nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Content Area */
+  .elegant-menu-content {
+    position: relative;
+    z-index: 5;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Elegant Title */
+  .elegant-menu-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .elegant-menu-notice {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    line-height: 1.6;
+  }
+  
+  /* Static Menu Sections */
+  .elegant-menu-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  
+  .elegant-menu-section {
+    text-align: center;
+  }
+  
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .elegant-menu-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .elegant-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .item-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #f4d03f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .item-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+    padding-top: 8px;
+  }
+  
+  /* PDF Categories Grid */
+  .pdf-categories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 50px auto 0;
+  }
+  
+  .pdf-category-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .pdf-category-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .pdf-category-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Loading State */
+  .elegant-menu-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(135deg, #2c3e50, #4a4a4a);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .elegant-menu-nav {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  
+    .nav-button {
+      padding: 10px 25px;
+      font-size: 14px;
+    }
+  
+    .elegant-menu-title {
+      font-size: 3rem;
+    }
+  
+    .section-title {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+  
+    .item-name {
+      font-size: 1.2rem;
+    }
+  
+    .item-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  
+    .item-price {
+      font-size: 1.1rem;
+      align-self: flex-end;
+    }
+  
+    .pdf-category-button {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .elegant-menu-content {
+      padding: 20px 15px;
+    }
+  
+    .elegant-menu-item {
+      padding: 20px;
+    }
+  
+    .elegant-menu-title {
+      font-size: 2.5rem;
+    }
+  }

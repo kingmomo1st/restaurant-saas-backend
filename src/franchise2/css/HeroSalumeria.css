@@ -1,0 +1,165 @@
+/* =========================
+   Hero Section (Salumeria)
+   ========================= */
+
+   .salumeria-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1; /* Below the About section */
+  }
+  
+  .salumeria-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .salumeria-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.3s forwards;
+  }
+  
+  .salumeria-main-logo {
+    position: relative;
+    padding: 2rem 3rem;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+  }
+  
+  .restaurant-name {
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  
+  .logo-border {
+    background: linear-gradient(
+      90deg,
+      #009246 0%,
+      #009246 33%,
+      #ffffff 33%,
+      #ffffff 66%,
+      #ce2b37 66%,
+      #ce2b37 100%
+    );
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .salumeria-tagline-script {
+    font-family: 'Brush Script MT', cursive, 'Times New Roman', serif;
+    font-size: 4rem;
+    color: #ffffff;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+  }
+  
+  .salumeria-cta-btn {
+    display: inline-block;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 1rem 2.5rem;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 3rem;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease 1s forwards;
+  }
+  
+  .salumeria-cta-btn:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ================
+     Responsive Rules
+     ================ */
+  
+  @media (max-width: 1024px) {
+    .restaurant-name {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    .salumeria-tagline-script {
+      font-size: 3.5rem;
+    }
+    .salumeria-main-logo {
+      padding: 1.5rem 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .restaurant-name {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    .salumeria-tagline-script {
+      font-size: 3rem;
+    }
+    .salumeria-main-logo {
+      padding: 1.2rem 2rem;
+    }
+    .salumeria-logo-container {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .restaurant-name {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .salumeria-tagline-script {
+      font-size: 2.5rem;
+    }
+    .salumeria-main-logo {
+      padding: 1rem 1.5rem;
+    }
+    .salumeria-cta-btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+  }

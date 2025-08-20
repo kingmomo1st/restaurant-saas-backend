@@ -1,0 +1,125 @@
+/* Custom Section - Free layout like Welcome Section */
+.homepage-wrapper .custom-section {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  padding: 120px 0 !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+  }
+  
+  /* Same radial gradient background as Welcome Section */
+  .homepage-wrapper .custom-section::before {
+  content: “” !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(
+  ellipse 80% 60% at 50% 50%,
+  rgba(245, 235, 220, 1) 20%,
+  rgba(245, 235, 220, 0.98) 40%,
+  rgba(245, 235, 220, 0.85) 60%,
+  rgba(245, 235, 220, 0.4) 80%,
+  transparent 100%
+  ) !important;
+  box-shadow: inset 0 0 400px rgba(0, 0, 0, 0.02) !important;
+  z-index: -1 !important;
+  }
+  
+  /* Remove container - make content free width like Welcome */
+  .homepage-wrapper .custom-wrapper {
+  width: 100% !important;
+  max-width: 800px !important;
+  padding: 0 40px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  background: none !important; /* Remove white container */
+  border-radius: 0 !important; /* Remove border radius */
+  box-shadow: none !important; /* Remove shadow */
+  }
+  
+  /* Title styling like Welcome Section */
+  .homepage-wrapper .custom-wrapper h2 {
+  font-size: 2.5rem !important;
+  color: #8B0000 !important; /* Dark Red */
+  font-weight: 700 !important;
+  font-family: var(--heading-font, 'Playfair Display', serif) !important;
+  margin-bottom: 30px !important;
+  opacity: 1 !important;
+  /* 🔥 GPU acceleration for animations */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  }
+  
+  /* Paragraph styling like Welcome Section */
+  .homepage-wrapper .custom-wrapper p {
+  color: #8B0000 !important; /* Dark Red */
+  font-family: var(–body-font, ‘Lato’, sans-serif) !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  max-width: 700px !important;
+  margin: 0 auto 25px !important;
+  text-shadow: none !important;
+  /* 🔥 GPU acceleration for animations */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  }
+  
+  /* Images gallery like Private Dining - horizontal scroll */
+  .homepage-wrapper .custom-images {
+  display: flex !important;
+  overflow-x: auto !important;
+  gap: 20px !important;
+  margin-top: 40px !important;
+  scroll-snap-type: x mandatory !important;
+  padding: 10px !important; /* Prevent clipping during scale */
+  justify-content: center !important;
+  }
+  
+  .homepage-wrapper .custom-images img {
+  width: 300px !important; /* Fixed width instead of 90% */
+  height: 200px !important; /* Fixed height to prevent oversizing */
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  object-fit: cover !important;
+  scroll-snap-align: center !important;
+  flex-shrink: 0 !important;
+  /* 🔥 GPU acceleration for animations and hover effects */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  }
+  
+  .homepage-wrapper .custom-images img:hover {
+  transform: translateZ(0) scale(1.03) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+  .homepage-wrapper .custom-section {
+  padding: 100px 20px !important;
+  }
+  
+  .homepage-wrapper .custom-wrapper h2 {
+  font-size: 36px !important;
+  }
+  
+  .homepage-wrapper .custom-wrapper {
+  padding: 0 20px !important;
+  }
+  }
+  
+  @media (max-width: 768px) {
+  .homepage-wrapper .custom-wrapper {
+  padding: 0 20px !important;
+  }
+  }

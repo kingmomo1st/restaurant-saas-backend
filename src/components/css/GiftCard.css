@@ -54,6 +54,8 @@
   .giftcard-form textarea {
     resize: vertical;
     min-height: 100px;
+    color: #333 !important;
+    background-color: #fff !important;
   }
   
   .giftcard-submit {
@@ -84,4 +86,10 @@
     color: red;
     margin-top: 15px;
     font-weight: 500;
+  }
+
+  .giftcard-container input,
+  .giftcard-form input {
+    color: #333 !important;
+    background-color: #fff !important;
   }

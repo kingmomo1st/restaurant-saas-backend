@@ -1,0 +1,186 @@
+.salumeria-cart-icon-container {
+  position: fixed;
+  top: 80px;
+  left: 30px;
+  transform: none;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+  
+  .salumeria-cart-icon-container:hover {
+  transform: scale(1.05);
+  }
+  
+  .salumeria-cart-icon {
+  position: relative;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  }
+  
+  .salumeria-cart-icon:hover {
+  background: linear-gradient(135deg, #555 0%, #777 100%);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  }
+  
+  .salumeria-cart-emoji {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+  .salumeria-cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.4);
+  animation: salumeria-pulse 2s infinite;
+  }
+  
+  .salumeria-cart-count {
+  line-height: 1;
+  }
+  
+  .salumeria-cart-preview {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: none;
+  margin-left: 15px;
+  background: rgba(44, 44, 44, 0.98);
+  border: 1px solid #555;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 200px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  }
+  
+  .salumeria-cart-icon-container:hover .salumeria-cart-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(10px);
+  }
+  
+  .salumeria-cart-preview-header {
+  text-align: center;
+  margin-bottom: 15px;
+  }
+  
+  .salumeria-cart-preview-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: “Georgia”, serif;
+  }
+  
+  .salumeria-cart-preview-total {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #555;
+  }
+  
+  .salumeria-cart-total-price {
+  display: block;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: “Georgia”, serif;
+  }
+  
+  .salumeria-cart-total-items {
+  color: #bbb;
+  font-size: 0.9rem;
+  font-family: “Georgia”, serif;
+  }
+  
+  .salumeria-cart-preview-action {
+  text-align: center;
+  }
+  
+  .salumeria-checkout-text {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #444, #666);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  font-family: “Georgia”, serif;
+  }
+  
+  /* Pulse animation for badge */
+  @keyframes salumeria-pulse {
+  0% {
+  transform: scale(1);
+  }
+  50% {
+  transform: scale(1.1);
+  }
+  100% {
+  transform: scale(1);
+  }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+  .salumeria-cart-icon-container {
+  left: 20px;
+  top: 20px;
+  }
+  
+  .salumeria-cart-icon-container:hover {
+  transform: scale(1.05);
+  }
+  
+  .salumeria-cart-icon {
+  width: 70px;
+  height: 70px;
+  }
+  
+  .salumeria-cart-emoji {
+  font-size: 2rem;
+  }
+  
+  .salumeria-cart-preview {
+  left: 0;
+  top: 100%;
+  transform: none;
+  margin-left: 0;
+  margin-top: 15px;
+  min-width: 180px;
+  }
+  
+  .salumeria-cart-icon-container:hover .salumeria-cart-preview {
+  transform: translateY(10px);
+  }
+  }

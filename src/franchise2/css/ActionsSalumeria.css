@@ -1,0 +1,288 @@
+/* ActionsSalumeria.css - Salumeria Rosi inspired black & white design */
+
+.actions-salumeria-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.actions-container {
+  max-width: 1400px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.actions-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+/* Left side - Circular Image */
+.actions-image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-image-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+
+.circular-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  border: 8px solid #ffffff;
+  transition: filter 0.3s ease;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  will-change: transform;
+}
+
+/* Right side - Content */
+.actions-text-side {
+  color: #ffffff;
+  padding-left: 4rem;
+}
+
+.actions-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-style: italic;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.actions-description {
+  font-family: "Times New Roman", serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 4rem;
+  max-width: 480px;
+  font-weight: 300;
+}
+
+.actions-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 350px;
+}
+
+.action-btn {
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-size: 1.1rem;
+  padding: 1.4rem 3rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-color: #ffffff;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.primary-btn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+}
+
+
+.location-info {
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.phone-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+.phone-link:hover {
+  color: #cccccc;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .actions-content {
+    gap: 6rem;
+    padding: 0 3rem;
+  }
+
+  .circular-image-container {
+    width: 380px;
+    height: 380px;
+  }
+
+  .actions-title {
+    font-size: 4.5rem;
+  }
+
+  .actions-text-side {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .actions-salumeria-section {
+    min-height: auto;
+  }
+
+  .actions-container {
+    height: auto;
+    padding: 6rem 0;
+  }
+
+  .actions-content {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    text-align: center;
+  }
+
+  .actions-text-side {
+    padding-left: 0;
+  }
+
+  .circular-image-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .actions-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .actions-content {
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+
+  .circular-image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .actions-title {
+    font-size: 3.2rem;
+  }
+
+  .actions-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions-content {
+    padding: 0 1.5rem;
+  }
+
+  .actions-buttons {
+    max-width: 100%;
+  }
+
+  .action-btn {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+  }
+
+  .circular-image-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .actions-title {
+    font-size: 2.8rem;
+  }
+
+  .actions-description {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,37 @@
+.franchise-analytics {
+    padding: 2rem;
+  }
+  
+  .franchise-analytics h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .franchise-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .franchise-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .franchise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .franchise-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .franchise-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }

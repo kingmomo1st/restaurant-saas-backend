@@ -1,0 +1,94 @@
+.restaurant-footer {
+  background: #111;
+  color: #fdf6ed;
+  padding: 60px 40px;
+  font-family: var(--main-font, 'Georgia, serif');
+  border-top: 2px solid var(--deep-red, #a00);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  font-family: var(--heading-font, 'Georgia, serif');
+  font-size: 18px;
+  color: var(--gold, #e1c16e);
+  margin-bottom: 12px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fdf6ed;
+}
+
+.footer-socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  font-size: 18px;
+  color: #fdf6ed;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--gold, #e1c16e);
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: var(--gold, #e1c16e);
+  color: #111;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer-btn:hover {
+  background: #fff;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 40px;
+  color: #fdf6ed;
+}
+
+@media (max-width: 768px) {
+  .restaurant-footer {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}

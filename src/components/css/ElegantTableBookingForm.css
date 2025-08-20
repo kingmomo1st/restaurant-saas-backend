@@ -6,6 +6,7 @@
     margin: 60px auto;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     font-family: var(--body-font);
+    backdrop-filter: blur(2px);
   }
   
   .form-title {

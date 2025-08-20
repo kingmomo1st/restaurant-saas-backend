@@ -1,0 +1,135 @@
+.review-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+    font-family: var(--body-font);
+  }
+  
+  .review-section h4 {
+    font-size: 24px;
+    font-family: var(--heading-font);
+    color: var(--deep-red);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .review {
+    margin-bottom: 20px;
+    padding: 18px;
+    background-color: #fdf7f3;
+    border-left: 5px solid var(--gold);
+    border-radius: 10px;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .review .stars {
+    color: #f6b400;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .review p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 4px;
+  }
+  
+  .review small {
+    color: #888;
+    font-size: 13px;
+  }
+  
+  .submit-review {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .submit-review h5 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+  
+  .submit-review select,
+  .submit-review textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    background: #fff;
+  }
+  
+  .submit-review textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+  
+  .submit-review button {
+    background-color: var(--deep-red);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .submit-review button:hover {
+    background-color: var(--charcoal);
+  }
+  
+  .submitted-note {
+    margin-top: 14px;
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Star rating (interactive) */
+  .star-rating {
+    display: flex;
+    gap: 6px;
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  
+  .star-rating span {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.25s ease;
+  }
+  
+  .star-rating span.active {
+    color: #f6b400;
+  }
+  
+  /* Average rating */
+  .average-rating {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

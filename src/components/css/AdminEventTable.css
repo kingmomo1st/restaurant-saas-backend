@@ -1,0 +1,440 @@
+/* AdminEventTable.css */
+
+.admin-event-table {
+  padding: 20px;
+  font-family: var(–body-font);
+  }
+  
+  .admin-event-table h2 {
+  font-family: var(–heading-font);
+  color: var(–deep-red);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  }
+  
+  /* Event Metrics Dashboard */
+  .event-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: var(–cream);
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+  }
+  
+  .metric-card {
+  text-align: center;
+  flex: 1;
+  }
+  
+  .metric-card h4 {
+  font-family: var(–heading-font);
+  color: var(–deep-red);
+  margin-bottom: 8px;
+  font-size: 18px;
+  }
+  
+  .metric-card .metric-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(–charcoal);
+  }
+  
+  /* Search and Filter Controls */
+  .event-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: var(–cream);
+  border-radius: 8px;
+  border: 1px solid var(–gold);
+  }
+  
+  .event-controls input,
+  .event-controls select {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+  max-width: 200px;
+  font-family: var(–body-font);
+  }
+  
+  .event-controls input:focus,
+  .event-controls select:focus {
+  outline: none;
+  border-color: var(–gold);
+  box-shadow: 0 0 0 2px rgba(192, 160, 96, 0.2);
+  }
+  
+  .event-controls button {
+  background-color: var(–deep-red);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  font-weight: 500;
+  }
+  
+  .event-controls button:hover {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  transform: translateY(-1px);
+  }
+  
+  /* Event Form */
+  .event-form {
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .event-form h3 {
+  font-family: var(–heading-font);
+  color: var(–deep-red);
+  margin-bottom: 20px;
+  font-size: 22px;
+  }
+  
+  .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+  }
+  
+  .form-group {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .form-group label {
+  font-weight: 600;
+  color: var(–charcoal);
+  margin-bottom: 6px;
+  font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: var(–body-font);
+  transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+  outline: none;
+  border-color: var(–gold);
+  box-shadow: 0 0 0 2px rgba(192, 160, 96, 0.2);
+  }
+  
+  .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+  }
+  
+  .form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  }
+  
+  .form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .create-btn, .save-btn {
+  background-color: var(–deep-red);
+  color: white;
+  }
+  
+  .create-btn:hover, .save-btn:hover {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  transform: translateY(-1px);
+  }
+  
+  .cancel-btn {
+  background-color: #999;
+  color: white;
+  }
+  
+  .cancel-btn:hover {
+  background-color: var(–charcoal);
+  }
+  
+  /* Table Styling */
+  .table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  }
+  
+  .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 1000px;
+  font-family: var(–body-font);
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  }
+  
+  .admin-table th {
+  background-color: var(–cream);
+  color: var(–charcoal);
+  font-weight: 600;
+  font-size: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: var(–heading-font);
+  }
+  
+  .admin-table td {
+  font-size: 14px;
+  color: var(–charcoal);
+  }
+  
+  .admin-table tr:hover {
+  background-color: #fdf5f0;
+  }
+  
+  .admin-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid var(–gold);
+  }
+  
+  /* Status Styling */
+  .admin-table .status-upcoming {
+  color: var(–olive-green);
+  font-weight: 600;
+  background-color: #f0f8f0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+  
+  .admin-table .status-ongoing {
+  color: var(–gold);
+  font-weight: 600;
+  background-color: #fff8e6;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+  
+  .admin-table .status-completed {
+  color: var(–deep-red);
+  font-weight: 600;
+  background-color: #ffe6e6;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+  
+  .admin-table .status-cancelled {
+  color: #999;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+  
+  /* Form Elements in Table */
+  .admin-table input,
+  .admin-table select,
+  .admin-table textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(–body-font);
+  }
+  
+  .admin-table input:focus,
+  .admin-table select:focus,
+  .admin-table textarea:focus {
+  outline: none;
+  border-color: var(–gold);
+  box-shadow: 0 0 0 2px rgba(192, 160, 96, 0.2);
+  }
+  
+  /* Action Buttons */
+  .admin-table button {
+  margin: 2px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .admin-table .save-btn {
+  background-color: var(–olive-green);
+  color: white;
+  }
+  
+  .admin-table .save-btn:hover {
+  background-color: var(–deep-red);
+  transform: translateY(-1px);
+  }
+  
+  .admin-table .cancel-btn {
+  background-color: #999;
+  color: white;
+  }
+  
+  .admin-table .cancel-btn:hover {
+  background-color: var(–charcoal);
+  }
+  
+  .admin-table .edit-btn {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  }
+  
+  .admin-table .edit-btn:hover {
+  background-color: var(–deep-red);
+  color: white;
+  transform: translateY(-1px);
+  }
+  
+  .admin-table .delete-btn {
+  background-color: var(–deep-red);
+  color: white;
+  }
+  
+  .admin-table .delete-btn:hover {
+  background-color: #660000;
+  transform: translateY(-1px);
+  }
+  
+  /* Checkbox Styling */
+  .admin-table input[type=“checkbox”] {
+  width: auto;
+  margin: 0;
+  accent-color: var(–gold);
+  }
+  
+  /* Event Type Badges */
+  .event-type-badge {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+  
+  .event-type-badge.special {
+  background-color: var(–deep-red);
+  color: white;
+  }
+  
+  .event-type-badge.holiday {
+  background-color: var(–olive-green);
+  color: white;
+  }
+  
+  /* Loading State */
+  .loading-state {
+  text-align: center;
+  padding: 40px;
+  color: var(–charcoal);
+  font-size: 16px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+  .admin-event-table {
+  padding: 15px;
+  }
+  
+  .event-metrics {
+  flex-direction: column;
+  gap: 15px;
+  }
+  
+  .event-controls {
+  flex-direction: column;
+  align-items: stretch;
+  }
+  
+  .event-controls input,
+  .event-controls select,
+  .event-controls button {
+  max-width: none;
+  width: 100%;
+  }
+  
+  .form-grid {
+  grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+  flex-direction: column;
+  }
+  
+  .form-actions button {
+  width: 100%;
+  }
+  
+  .admin-table {
+  font-size: 12px;
+  min-width: 800px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 10px 8px;
+  }
+  }

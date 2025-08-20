@@ -1,0 +1,65 @@
+/* LoyaltyAnalytics.css */
+
+.loyalty-analytics {
+    padding: 2rem;
+    background-color: #fefefe;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .loyalty-analytics h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .stat-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    min-width: 180px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .stat-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .stat-card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #16a085;
+  }
+  
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  
+  .chart-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+  }
+  
+  .chart-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+  }

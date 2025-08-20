@@ -2,6 +2,7 @@
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+
 }
 
 .menu-heading {
@@ -128,3 +129,8 @@ body {
   width: 100%;
   font-size: 14px;
 }
+
+.menu-container {
+  transition: background-image 0.5s ease-in-out;
+}
+

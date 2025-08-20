@@ -1,0 +1,309 @@
+/* ==================================================
+ROMA CUCINA PROTECTION SYSTEM
+Shields Roma Cucina from Salumeria global styles
+================================================== */
+
+/* Add Google Fonts for Roma Cucina */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+/* ===== ROMA CUCINA PROTECTIVE WRAPPER ===== */
+.roma-cucina-app,
+.roma-cucina-app *,
+[data-franchise="roma-cucina"],
+[data-franchise="roma-cucina"] * {
+
+  --font-heading: 'Playfair Display', serif !important;
+  --font-body: 'Lato', sans-serif !important;
+
+  --primary-color: #8B0000 !important;
+  --secondary-color: #C0A060 !important;
+  --background-color: #F8F5F0 !important;
+  --text-color: #2E2E2E !important;
+}
+
+/* ===== KILL ALL SALUMERIA GLOBAL INTERFERENCE ===== */
+
+.roma-cucina-app,
+[data-franchise="roma-cucina"] {
+  font-family: var(--font-body) !important;
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  line-height: 1.6 !important;
+}
+
+.roma-cucina-app h1, .roma-cucina-app h2, .roma-cucina-app h3,
+.roma-cucina-app h4, .roma-cucina-app h5, .roma-cucina-app h6,
+[data-franchise="roma-cucina"] h1,
+[data-franchise="roma-cucina"] h2,
+[data-franchise="roma-cucina"] h3,
+[data-franchise="roma-cucina"] h4,
+[data-franchise="roma-cucina"] h5,
+[data-franchise="roma-cucina"] h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--primary-color) !important;
+  font-weight: normal !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 20px !important;
+  text-transform: none !important;
+}
+
+.roma-cucina-app p,
+[data-franchise="roma-cucina"] p {
+  color: var(--text-color) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+  font-family: var(--font-body) !important;
+  text-transform: none !important;
+}
+
+.roma-cucina-app button, .roma-cucina-app .button,
+.roma-cucina-app input[type="submit"], .roma-cucina-app input[type="button"],
+[data-franchise="roma-cucina"] button,
+[data-franchise="roma-cucina"] .button,
+[data-franchise="roma-cucina"] input[type="submit"],
+[data-franchise="roma-cucina"] input[type="button"] {
+  border: none !important;
+  border-radius: 4px !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+  padding: 12px 24px !important;
+  font-size: 1rem !important;
+  letter-spacing: normal !important;
+  display: inline-block !important;
+  text-align: center !important;
+  text-transform: none !important;
+}
+
+.roma-cucina-app button:hover, .roma-cucina-app .button:hover,
+[data-franchise="roma-cucina"] button:hover,
+[data-franchise="roma-cucina"] .button:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+  transform: none !important;
+}
+
+/* ===== HERO SECTION PROTECTION ===== */
+.roma-cucina-app .hero-title,
+[data-franchise="roma-cucina"] .hero-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.1 !important;
+  color: white !important;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7) !important;
+  font-size: clamp(2.5rem, 8vw, 5rem) !important;
+}
+
+.roma-cucina-app .hero-subtitle,
+[data-franchise="roma-cucina"] .hero-subtitle {
+  font-family: var(--font-body) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.4 !important;
+  color: #F8F5F0 !important;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
+  margin-top: 1.5rem !important;
+  font-size: clamp(1.1rem, 3vw, 1.8rem) !important;
+}
+
+/* ===== NAVIGATION PROTECTION ===== */
+.roma-cucina-app .nav-link, .roma-cucina-app .navbar a, .roma-cucina-app nav a,
+.roma-cucina-app .menu-link, .roma-cucina-app .navigation-link,
+[data-franchise="roma-cucina"] .nav-link,
+[data-franchise="roma-cucina"] .navbar a,
+[data-franchise="roma-cucina"] nav a,
+[data-franchise="roma-cucina"] .menu-link,
+[data-franchise="roma-cucina"] .navigation-link {
+  font-family: var(--font-body) !important;
+  color: var(--primary-color) !important;
+  text-transform: none !important;
+  font-style: normal !important;
+  letter-spacing: normal !important;
+  transition: color 0.3s ease !important;
+  padding: 0 !important;
+  font-size: 1rem !important;
+}
+
+.roma-cucina-app .nav-link:hover,
+[data-franchise="roma-cucina"] .nav-link:hover {
+  color: var(--secondary-color) !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.roma-cucina-app .nav-link.active,
+[data-franchise="roma-cucina"] .nav-link.active {
+  color: var(--secondary-color) !important;
+  font-weight: bold !important;
+  border-bottom: 2px solid var(--secondary-color) !important;
+}
+
+/* ===== KILL SALUMERIA UTILITY CLASSES ===== */
+.roma-cucina-app .text-uppercase,
+.roma-cucina-app .text-capitalize,
+[data-franchise="roma-cucina"] .text-uppercase,
+[data-franchise="roma-cucina"] .text-capitalize {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.roma-cucina-app .text-italic,
+[data-franchise="roma-cucina"] .text-italic {
+  font-style: italic !important;
+}
+
+/* ===== SCROLL BUTTON PROTECTION ===== */
+.roma-cucina-app .scroll-btn,
+[data-franchise="roma-cucina"] .scroll-btn {
+  margin-top: 30px !important;
+  background: transparent !important;
+  border: 2px solid white !important;
+  color: white !important;
+  font-size: 30px !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  animation: bounce 2s infinite !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  padding: 0 !important;
+}
+
+.roma-cucina-app .scroll-btn:hover,
+[data-franchise="roma-cucina"] .scroll-btn:hover {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  transform: none !important;
+}
+
+/* ===== FORM ELEMENTS PROTECTION ===== */
+.roma-cucina-app input, .roma-cucina-app textarea, .roma-cucina-app select,
+[data-franchise="roma-cucina"] input,
+[data-franchise="roma-cucina"] textarea,
+[data-franchise="roma-cucina"] select {
+  background-color: white !important;
+  border: 1px solid #ddd !important;
+  color: var(--text-color) !important;
+  padding: 0.8rem 1rem !important;
+  border-radius: 4px !important;
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.roma-cucina-app input:focus, .roma-cucina-app textarea:focus,
+[data-franchise="roma-cucina"] input:focus,
+[data-franchise="roma-cucina"] textarea:focus {
+  outline: none !important;
+  border-color: var(--primary-color) !important;
+  background-color: white !important;
+}
+
+/* Private Dining Section (continued) */
+[data-franchise="roma-cucina"] .private-dining h2,
+[data-franchise="roma-cucina"] .private-dining h3,
+[data-franchise="roma-cucina"] .private-dining p,
+[data-franchise="roma-cucina"] .private-dining label,
+[data-franchise="roma-cucina"] .private-dining input,
+[data-franchise="roma-cucina"] .private-dining textarea,
+[data-franchise="roma-cucina"] .private-dining select {
+  font-family: var(--font-body) !important;
+  color: var(--text-color) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-style: normal !important;
+  background-color: white !important;
+}
+
+/* Newsletter Section */
+.roma-cucina-app .newsletter-section h2,
+[data-franchise="roma-cucina"] .newsletter-section h2 {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  color: var(--primary-color) !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+}
+
+.roma-cucina-app .newsletter-section input,
+[data-franchise="roma-cucina"] .newsletter-section input {
+  background-color: white !important;
+  border: 1px solid #ccc !important;
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  padding: 0.75rem 1rem !important;
+  color: var(--text-color) !important;
+  border-radius: 4px !important;
+  text-transform: none !important;
+}
+
+.roma-cucina-app .newsletter-section button,
+[data-franchise="roma-cucina"] .newsletter-section button {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  font-family: var(--font-body) !important;
+  padding: 0.75rem 1.5rem !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+  text-transform: none !important;
+}
+
+.roma-cucina-app .newsletter-section button:hover,
+[data-franchise="roma-cucina"] .newsletter-section button:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Footer Section */
+.roma-cucina-app footer,
+[data-franchise="roma-cucina"] footer {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  font-family: var(--font-body) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.roma-cucina-app footer a,
+[data-franchise="roma-cucina"] footer a {
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  font-family: var(--font-body) !important;
+  transition: color 0.3s ease !important;
+}
+
+.roma-cucina-app footer a:hover,
+[data-franchise="roma-cucina"] footer a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Disable global backdrop filters if any */
+.roma-cucina-app *,
+[data-franchise="roma-cucina"] * {
+  backdrop-filter: none !important;
+}
+
+/* Ensure all uppercase utility killers work globally */
+.roma-cucina-app .uppercase,
+[data-franchise="roma-cucina"] .uppercase {
+  text-transform: none !important;
+}
+
+
+
+.roma-cucina-app,
+[data-franchise="roma-cucina"] {
+  background: none !important;
+}
+/* === END ROMA CUCINA PROTECTION === */

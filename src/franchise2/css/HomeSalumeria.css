@@ -1,0 +1,251 @@
+.salumeria-homepage {
+  width: 100%;
+  font-family: "Times New Roman", serif;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Hero section - takes full viewport height */
+.salumeria-homepage .salumeria-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Ensure stacking order of all sections */
+.salumeria-homepage > * {
+  position: relative;
+  z-index: auto;
+}
+
+.salumeria-homepage.minimal {
+  background-image: none !important;
+  background-color: #1a1a1a;
+}
+
+.salumeria-homepage .section {
+  min-height: auto;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.load-more-section,
+.progressive-load {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: transparent;
+}
+
+.load-more-btn {
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.load-more-btn:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.salumeria-homepage h1,
+.salumeria-homepage h2,
+.salumeria-homepage h3,
+.salumeria-homepage h4 {
+  font-family: 'Times New Roman', serif;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.salumeria-homepage h1 { font-size: 2.5rem; }
+.salumeria-homepage h2 { font-size: 2rem; }
+.salumeria-homepage h3 { font-size: 1.5rem; }
+
+.salumeria-homepage p {
+  color: #cccccc;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.salumeria-homepage button,
+.salumeria-homepage .button,
+.salumeria-homepage a[class*="btn"],
+.salumeria-homepage a[class*="button"] {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.salumeria-homepage button:hover,
+.salumeria-homepage .button:hover,
+.salumeria-homepage a[class*="btn"]:hover,
+.salumeria-homepage a[class*="button"]:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+.salumeria-homepage input,
+.salumeria-homepage textarea,
+.salumeria-homepage select {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444444;
+  color: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-family: 'Times New Roman', serif;
+  width: 100%;
+  max-width: 400px;
+}
+
+.salumeria-homepage input:focus,
+.salumeria-homepage textarea:focus,
+.salumeria-homepage select:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.salumeria-homepage input::placeholder,
+.salumeria-homepage textarea::placeholder {
+  color: #888888;
+  font-style: italic;
+}
+
+.salumeria-homepage .card,
+.salumeria-homepage [class*="card"] {
+  background-color: transparent;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.salumeria-homepage .card:hover,
+.salumeria-homepage [class*="card"]:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
+.salumeria-homepage img {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.salumeria-homepage img:hover {
+  opacity: 0.9;
+}
+
+.salumeria-homepage .grid,
+.salumeria-homepage [class*="grid"] {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.loading,
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #cccccc;
+  background-color: #1a1a1a;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.salumeria-homepage > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation */
+.salumeria-homepage > *:nth-child(1) { animation-delay: 0.1s; }
+.salumeria-homepage > *:nth-child(2) { animation-delay: 0.2s; }
+.salumeria-homepage > *:nth-child(3) { animation-delay: 0.3s; }
+.salumeria-homepage > *:nth-child(4) { animation-delay: 0.4s; }
+.salumeria-homepage > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .salumeria-homepage .section {
+    padding: 3rem 1rem;
+  }
+
+  .salumeria-homepage .grid,
+  .salumeria-homepage [class*="grid"] {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .salumeria-homepage h1 { font-size: 2rem; }
+  .salumeria-homepage h2 { font-size: 1.7rem; }
+
+  .load-more-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .salumeria-homepage .section {
+    padding: 2rem 1rem;
+  }
+
+  .salumeria-homepage h1 { font-size: 1.8rem; }
+  .salumeria-homepage h2 { font-size: 1.5rem; }
+
+  .load-more-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

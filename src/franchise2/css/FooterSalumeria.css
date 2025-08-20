@@ -1,0 +1,404 @@
+/* =========================
+PART 1: MAIN FOOTER SECTION
+========================= */
+
+.footer-salumeria-main {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  padding: 0 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 12px;
+}
+
+.footer-nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  color: white;
+}
+
+/* Newsletter */
+.footer-newsletter {
+  align-items: center;
+  text-align: center;
+}
+
+.newsletter-form {
+  width: 100%;
+  max-width: 350px;
+}
+
+.newsletter-input-group {
+  margin-bottom: 20px;
+}
+
+.newsletter-label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e74c3c;
+  border-radius: 4px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #c0392b;
+}
+
+.newsletter-button {
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsletter-button:hover {
+  background: white;
+  color: #4a4a4a;
+}
+
+.newsletter-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Hours */
+.footer-hours {
+  text-align: right;
+}
+
+.location-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.location-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.hours-list {
+  text-align: right;
+}
+
+.hours-item {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+/* ===============================
+PART 2: BOTTOM BAR - LOGO + INFO
+=============================== */
+
+.footer-salumeria-bottom {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 20px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 0 40px;
+  gap: 20px;
+}
+
+.footer-bottom-left {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* Logo */
+.footer-logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-with-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.footer-main-logo {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  border: 1.5px solid #ffffff;
+  border-radius: 6px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-restaurant-name {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.footer-restaurant-subtitle {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.footer-logo-border {
+  background: linear-gradient(
+    90deg,
+    #009246 0%,
+    #009246 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #ce2b37 66%,
+    #ce2b37 100%
+  );
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Contact Info */
+.footer-bottom-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bottom-divider {
+  opacity: 0.6;
+}
+
+
+/* ===============================
+SOCIAL ICONS
+=============================== */
+
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.social-text {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===============================
+RESPONSIVE DESIGN
+=============================== */
+
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .footer-hours {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-salumeria-main {
+    padding: 40px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer-hours,
+  .hours-list {
+    text-align: center;
+  }
+
+  .footer-bottom-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .footer-bottom-left {
+    order: 3;
+    justify-content: center;
+  }
+
+  .footer-logo-center {
+    order: 1;
+    justify-content: center;
+  }
+
+  .footer-bottom-right {
+    order: 2;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .bottom-divider {
+    display: none;
+  }
+
+  .footer-main-logo {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .footer-restaurant-name {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .footer-restaurant-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .footer-bottom-right {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ===============================
+LOADING STATE
+=============================== */
+
+.footer-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}

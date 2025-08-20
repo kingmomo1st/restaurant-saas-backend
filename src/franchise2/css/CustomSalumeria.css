@@ -1,0 +1,49 @@
+.custom-salumeria-section {
+    padding: 60px 20px;
+    transition: background 0.4s ease;
+  }
+  
+  .custom-salumeria-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .custom-salumeria-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-salumeria-text {
+    max-width: 600px;
+  }
+  
+  .custom-salumeria-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.6em;
+  }
+  
+  .custom-salumeria-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4em;
+    color: inherit;
+    font-weight: 500;
+  }
+  
+  .custom-salumeria-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .image-left .custom-salumeria-image {
+    order: 1;
+  }
+  
+  .image-left .custom-salumeria-text {
+    order: 2;
+  }

@@ -1,92 +1,180 @@
-/* Private Dining Section - General Layout */
-.private-dining-section {
-  font-family: var(--body-font);
-  color: var(--charcoal);
-  background-color: var(--light-cream);
-  padding-top: 80px; /* Added spacing to prevent navbar overlap */
+/* === Private Dining Section - Layout and Background === */
+.homepage-wrapper .private-dining-section {
+  background: none !important;
+  font-family: var(--body-font, 'Lato', sans-serif) !important;
+  color: var(--charcoal, #2E2E2E) !important;
+  padding: 120px 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
 }
 
-.private-dining-container {
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+/* === Radial Background Gradient === */
+.homepage-wrapper .private-dining-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    rgba(245, 235, 220, 1) 20%,
+    rgba(245, 235, 220, 0.98) 40%,
+    rgba(245, 235, 220, 0.85) 60%,
+    rgba(245, 235, 220, 0.4) 80%,
+    transparent 100%
+  ) !important;
+  box-shadow: inset 0 0 400px rgba(0, 0, 0, 0.02) !important;
 }
 
-/* Inquire Now Button - Positioned Above Images */
-.btn-outline {
-  padding: 12px 40px;
-  border: 2px solid #9d2a2f;
-  background: transparent;
-  color: #9d2a2f;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-top: 40px; /* Added space between paragraph and button */
-  margin-bottom: 40px; /* Added space between button and images */
+/* === Headings === */
+.homepage-wrapper .private-dining-section h2 {
+  font-size: 2.5rem !important;
+  color: #2E2E2E !important;
+  font-weight: 700 !important;
+  font-family: var(--heading-font, 'Playfair Display', serif) !important;
+  text-align: center !important;
+  margin: 0 auto 30px !important;
+  max-width: 800px !important;
 }
 
-.btn-outline:hover {
-  background-color: #9d2a2f;
-  color: #fff;
+/* === Paragraphs === */
+.homepage-wrapper .private-dining-section p {
+  color: #2E2E2E !important;
+  font-family: 'Lato', sans-serif!important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  text-align: center !important;
+  margin: 0 auto 25px !important;
+  max-width: 700px !important;
 }
 
-/* Image Gallery - Sfoglia Style */
-.image-gallery {
-  display: flex;
-  overflow-x: auto; /* Horizontal scrolling for images */
-  gap: 30px; /* Space between images */
-  margin-top: 40px;
-  justify-content: center; /* Centers the images horizontally */
-  scroll-snap-type: x mandatory; /* Smooth scroll */
+/* === CTA Buttons === */
+.homepage-wrapper .private-dining-section .btn,
+.homepage-wrapper .private-dining-section button,
+.homepage-wrapper .private-dining-section .request-booking-btn,
+.homepage-wrapper .inquire-now-btn-container .btn,
+.homepage-wrapper .inquire-now-btn-container button {
+  padding: 14px 32px !important;
+  font-size: 16px !important;
+  font-family: var(--body-font, 'Lato', sans-serif) !important;
+  font-weight: 400 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background-color: #8B0000 !important; /* Roma Red */
+  color: #fff !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, transform 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2) !important;
 }
 
-.image-gallery img {
-  width: 90%; /* Allows for wide display of images */
-  height: auto;
-  max-width: 350px; /* Limit max width of images */
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
-  object-fit: cover; /* Ensures the images maintain aspect ratio without distortion */
+/* === Button Hover === */
+.homepage-wrapper .private-dining-section .btn:hover,
+.homepage-wrapper .private-dining-section button:hover,
+.homepage-wrapper .private-dining-section .request-booking-btn:hover,
+.homepage-wrapper .inquire-now-btn-container .btn:hover,
+.homepage-wrapper .inquire-now-btn-container button:hover {
+  background-color: #2E2E2E !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(46, 46, 46, 0.3) !important;
 }
 
-.image-gallery img:hover {
-  transform: scale(1.05); /* Slight scale-up effect for hover */
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+/* === Button Container Centered === */
+.homepage-wrapper .inquire-now-btn-container {
+  margin: 40px auto !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
-/* Paragraph Styling */
-.private-dining-section p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  text-align: center;
+/* === Image Gallery === */
+.homepage-wrapper .image-gallery {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  margin-top: 40px !important;
+  padding: 10px !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
 }
 
-/* Media Queries for smaller screens */
+.homepage-wrapper .image-gallery img {
+  width: 90% !important;
+  max-width: 350px !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  scroll-snap-align: center !important;
+  flex-shrink: 0 !important;
+  will-change: transform !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+}
+
+.homepage-wrapper .image-gallery img:hover {
+  transform: translateZ(0) scale(1.03) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* === Responsive Adjustments === */
 @media (max-width: 768px) {
-  .private-dining-container {
-    padding: 0 15px;
+  .homepage-wrapper .private-dining-section h2 {
+    font-size: 2rem !important;
   }
 
-  .section-heading {
-    font-size: 40px;
+  .homepage-wrapper .private-dining-section p {
+    font-size: 16px !important;
+    padding: 0 20px !important;
   }
 
-  .private-dining-section p {
-    font-size: 16px;
+  .homepage-wrapper .private-dining-section .btn,
+  .homepage-wrapper .inquire-now-btn-container .btn {
+    padding: 12px 28px !important;
+    font-size: 15px !important;
   }
 
-  .image-gallery {
-    gap: 20px; /* Reduced space between images on smaller screens */
+  .homepage-wrapper .image-gallery {
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
-  .image-gallery img {
-    max-width: 100%; /* Makes the images more flexible for smaller screens */
+  .homepage-wrapper .image-gallery img {
+    max-width: 90% !important;
   }
+}
+.homepage-wrapper .private-dining-section .btn-outline,
+.homepage-wrapper .inquire-now-btn-container .btn-outline {
+  padding: 14px 32px !important;
+  font-size: 16px !important;
+  background-color: #8B0000 !important; /* Roma Cucina red */
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-family: var(--body-font, 'Lato', sans-serif) !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2) !important;
+  transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+.homepage-wrapper .private-dining-section .btn-outline:hover,
+.homepage-wrapper .inquire-now-btn-container .btn-outline:hover {
+  background-color: #2E2E2E !important; /* Charcoal on hover */
+  box-shadow: 0 6px 20px rgba(46, 46, 46, 0.3) !important;
+  transform: translateY(-2px) !important;
 }

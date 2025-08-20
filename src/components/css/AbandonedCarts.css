@@ -1,0 +1,55 @@
+.abandoned-carts-panel {
+    background: #fff9f5;
+    border: 1px solid var(--gold);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .abandoned-carts-panel h2 {
+    color: var(--deep-red);
+    margin-bottom: 10px;
+  }
+  
+  .abandoned-carts-panel p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .abandoned-carts-panel button {
+    background: var(--deep-red);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .abandoned-carts-panel button:hover {
+    background: #9b1c1c;
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    background: #f3ffe9;
+    border: 1px solid #c5f1b0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .result-box ul {
+    margin-top: 10px;
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .error-msg {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+  }

@@ -1,0 +1,365 @@
+/* ===== CheckoutSalumeria.css ===== */
+
+.checkout-salumeria-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+  }
+  
+  .checkout-salumeria-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .location-info {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .checkout-form {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e8ed;
+  }
+  
+  /* ===== Delivery Method Section ===== */
+  .delivery-method {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+  }
+  
+  .delivery-method h3 {
+    margin: 0 0 15px;
+    color: #495057;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .delivery-method label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .delivery-method input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #27ae60;
+  }
+  
+  /* ===== Form Sections ===== */
+  .customer-info,
+  .delivery-info,
+  .loyalty-section,
+  .giftcard-section,
+  .cart-summary {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+  
+  .customer-info h3,
+  .delivery-info h3,
+  .loyalty-section h3,
+  .giftcard-section h3,
+  .cart-summary h3 {
+    margin: 0 0 20px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 8px;
+  }
+  
+  /* ===== Form Groups ===== */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #495057;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+  }
+  
+  .form-group input:invalid {
+    border-color: #e74c3c;
+  }
+  
+  /* ===== Loyalty Section ===== */
+  .loyalty-section p {
+    margin: 0 0 15px;
+    color: #495057;
+  }
+  
+  .loyalty-section label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .loyalty-section input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #27ae60;
+  }
+  
+  /* ===== Gift Card Section ===== */
+  .giftcard-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .giftcard-input input {
+    flex: 1;
+  }
+  
+  .giftcard-input button {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .giftcard-input button:hover {
+    background: #2980b9;
+  }
+  
+  /* ===== Cart Items ===== */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modifiers-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+  }
+  
+  .modifiers-list li {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 2px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .quantity-controls button:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+  }
+  
+  .quantity-controls span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .item-total {
+    font-weight: 600;
+    color: #27ae60;
+    min-width: 80px;
+    text-align: right;
+  }
+  
+  /* ===== Order Totals ===== */
+  .order-totals {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+  }
+  
+  .total-line.discount {
+    color: #27ae60;
+    font-weight: 500;
+  }
+  
+  .total-line.final-total {
+    border-top: 2px solid #2c3e50;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .total-line.final-total span {
+    font-size: 1.3rem;
+  }
+  
+  /* ===== Place Order Button ===== */
+  .place-order-button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+  }
+  
+  .place-order-button:hover {
+    background: linear-gradient(135deg, #229954, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+  }
+  
+  .place-order-button:active {
+    transform: translateY(0);
+  }
+  
+  .place-order-button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .checkout-salumeria-container {
+      padding: 15px;
+    }
+  
+    .checkout-form {
+      padding: 20px;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .quantity-controls {
+      margin: 10px 0;
+    }
+  
+    .item-total {
+      align-self: flex-end;
+    }
+  
+    .total-line {
+      font-size: 0.95rem;
+    }
+  
+    .delivery-method label {
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  
+    .giftcard-input {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .checkout-salumeria-container h2 {
+      font-size: 1.6rem;
+    }
+  
+    .customer-info h3,
+    .delivery-info h3,
+    .loyalty-section h3,
+    .giftcard-section h3,
+    .cart-summary h3 {
+      font-size: 1.1rem;
+    }
+  
+    .place-order-button {
+      font-size: 1.1rem;
+      padding: 16px;
+    }
+  }

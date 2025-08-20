@@ -1,0 +1,242 @@
+.giftcard-salumeria-container {
+  position: relative;
+  padding: 80px 40px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Georgia", serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background image layer - stays behind content */
+.giftcard-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Very subtle background */
+  z-index: 1;
+}
+
+/* Content layer - always on top */
+.giftcard-salumeria-content {
+  position: relative;
+  z-index: 2;
+}
+
+.giftcard-salumeria-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.giftcard-salumeria-content p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.giftcard-salumeria-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.giftcard-salumeria-box {
+  background-color: rgba(44, 44, 44, 0.95); /* Semi-transparent background */
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 320px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px); /* Blur effect for modern look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.giftcard-salumeria-box:hover {
+  background-color: rgba(51, 51, 51, 0.95);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Professional icon styling instead of images */
+.giftcard-icon {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  border-radius: 8px;
+  border: 1px solid #555;
+}
+
+.giftcard-icon span {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.giftcard-salumeria-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.giftcard-salumeria-box p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.giftcard-salumeria-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  font-family: "Georgia", serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.giftcard-salumeria-button:hover {
+  background-color: #fff;
+  color: #111;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Form styling */
+.giftcard-purchase-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(44, 44, 44, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-family: "Georgia", serif;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+  color: #111;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: "Georgia", serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.location-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.purchase-button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.purchase-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .giftcard-salumeria-container {
+    padding: 40px 20px;
+  }
+
+  .giftcard-salumeria-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .giftcard-salumeria-box {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .giftcard-purchase-form {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,186 @@
+.cms-builder-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+.cms-builder-container h2 {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.cms-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cms-section-card {
+  background-color: #fefefe;
+  border: 2px dashed #ddd;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  border-radius: 10px;
+  cursor: grab;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.cms-section-card:hover {
+  background-color: #fcfcfc;
+  border-color: #bbb;
+  transform: scale(1.01);
+}
+
+.cms-section-card:active {
+  cursor: grabbing;
+  background-color: #f1f1f1;
+}
+
+.cms-section-card.hidden {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.cms-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cms-section-header h3 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #e63946;
+}
+
+.toggle-wrapper {
+  margin-bottom: 18px;
+}
+
+.toggle-wrapper label {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.cms-section-card label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 10px 0 6px;
+  color: #333;
+}
+
+.cms-section-card input[type="text"],
+.cms-section-card input[type="file"],
+.cms-section-card textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  transition: border 0.2s ease;
+}
+
+.cms-section-card input[type="text"]:focus,
+.cms-section-card textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+  background-color: #fff;
+}
+
+.cms-section-card img {
+  margin: 10px 0;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.save-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 32px;
+  background-color: #1a73e8;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #155ec3;
+}
+
+.add-section-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.add-section-dropdown {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  transition: border 0.2s ease;
+}
+
+.add-section-dropdown:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* Force visible text in inputs */
+.cms-section-card input[type="text"],
+.cms-section-card input[type="file"], 
+.cms-section-card textarea {
+  color: #333 !important;
+  background-color: #fafafa !important;
+}
+
+.cms-section-card input[type="text"]:focus,
+.cms-section-card textarea:focus {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* Fix for any inherited white text */
+.cms-section-card * {
+  color: inherit;
+}
+
+.cms-section-card input,
+.cms-section-card textarea {
+  color: #333 !important;
+}

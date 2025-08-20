@@ -24,7 +24,7 @@
     display: block;
     font-weight: 600;
     font-size: 15px;
-    color: #333;
+    color: #2e2e2e  !important;
     margin-bottom: 6px;
   }
   
@@ -36,6 +36,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: border 0.3s ease;
+    
   }
   
   .form-group input:focus,
@@ -97,4 +98,20 @@
     .back-home-btn {
       font-size: 14px;
     }
+  }
+
+  .private-dining-subtext {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .private-dining-form-container input,
+  .private-dining input {
+    color: #333 !important;
+    background-color: #fff !important;
   }

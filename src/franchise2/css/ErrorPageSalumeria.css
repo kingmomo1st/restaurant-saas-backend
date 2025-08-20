@@ -1,0 +1,257 @@
+.salumeria-error-container {
+    background-color: #1f1f1f;
+    color: #fff;
+    min-height: 100vh;
+    padding: 80px 40px;
+    font-family: “Georgia”, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .salumeria-error-content {
+    max-width: 800px;
+    text-align: center;
+    background-color: rgba(44, 44, 44, 0.95);
+    border: 1px solid #555;
+    border-radius: 16px;
+    padding: 60px 40px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .salumeria-error-icon {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .error-emoji {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    display: block;
+    animation: shake 2s infinite;
+    }
+    
+    .error-x-mark {
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+    animation: errorPop 0.6s ease-out 0.5s both;
+    }
+    
+    .salumeria-error-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .salumeria-error-message {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    }
+    
+    .salumeria-error-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    }
+    
+    .error-info-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #666;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    }
+    
+    .error-info-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
+    
+    .error-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .error-info-card li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.5;
+    }
+    
+    .error-info-card p {
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    }
+    
+    .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+    
+    .contact-info span {
+    color: #fff;
+    font-weight: 500;
+    }
+    
+    .salumeria-error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    }
+    
+    .salumeria-error-btn {
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: “Georgia”, serif;
+    border: none;
+    }
+    
+    .salumeria-error-btn.primary {
+    background: linear-gradient(135deg, #ff6b6b, #ff5252);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+    
+    .salumeria-error-btn.primary:hover {
+    background: linear-gradient(135deg, #ff5252, #ff6b6b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    }
+    
+    .salumeria-error-btn.secondary {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+    
+    .salumeria-error-btn.secondary:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    }
+    
+    .salumeria-error-btn.tertiary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid #666;
+    }
+    
+    .salumeria-error-btn.tertiary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    transform: translateY(-2px);
+    }
+    
+    .salumeria-error-footer {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .salumeria-error-footer p {
+    color: #4CAF50;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    }
+    
+    .salumeria-error-footer small {
+    color: #888;
+    font-size: 0.85rem;
+    }
+    
+    /* Animations */
+    @keyframes shake {
+    0%, 100% {
+    transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+    }
+    }
+    
+    @keyframes errorPop {
+    0% {
+    transform: translateX(50%) scale(0);
+    opacity: 0;
+    }
+    50% {
+    transform: translateX(50%) scale(1.2);
+    }
+    100% {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
+    }
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+    .salumeria-error-container {
+    padding: 40px 20px;
+    }
+    
+    .salumeria-error-content {
+    padding: 40px 20px;
+    }
+    
+    .salumeria-error-title {
+    font-size: 2rem;
+    }
+    
+    .salumeria-error-details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+    
+    .salumeria-error-actions {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .salumeria-error-btn {
+    width: 100%;
+    max-width: 300px;
+    }
+    }

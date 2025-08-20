@@ -1,0 +1,77 @@
+.redeem-salumeria-wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #1c1c1c;
+  }
+  
+  .redeem-salumeria-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  }
+  
+  .redeem-salumeria-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+  }
+  
+  .redeem-salumeria-container p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .redeem-salumeria-form input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    color: #000;
+  }
+  
+  .redeem-salumeria-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #a78658;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .redeem-salumeria-form button:hover {
+    background-color: #c29b6d;
+  }
+  
+  .redeem-result {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c8f5cf;
+  }
+  
+  .redeem-error {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #ffbaba;
+    font-weight: 500;
+  }

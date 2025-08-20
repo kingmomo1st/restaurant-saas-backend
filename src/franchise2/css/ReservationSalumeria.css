@@ -1,0 +1,599 @@
+/* ===== RESERVATION SALUMERIA CSS - ORIGINAL BLACK DESIGN ===== */
+
+body .salumeria-reservation-section .form-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Make sure the close button is visible */
+.salumeria-reservation-section .close-button {
+  position: absolute !important;
+  top: 10px !important;
+  right: 15px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  color: white !important;
+  z-index: 10 !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.salumeria-reservation-section .form-group {
+  margin-bottom: 15px !important; /* Reduced spacing */
+}
+
+.salumeria-reservation-section .close-button:hover {
+  color: #ccc !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+}
+
+body .salumeria-reservation-section .form-modal {
+  background: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+  padding: 30px !important; /* Reduced padding */
+  border-radius: 8px !important;
+  width: 600px !important; /* Made wider */
+  max-width: 95vw !important;
+  max-height: 70vh !important; /* Reduced height */
+  overflow-y: auto !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+  position: relative !important;
+  margin: 0 !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.salumeria-reservation-section .form-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) !important; /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  
+}
+
+.salumeria-reservation-section .form-modal {
+  background: rgba(26, 26, 26, 0.95) !important; /* Dark background instead of white */
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  position: fixed !important;
+  
+
+}
+
+.salumeria-reservation-section .form-modal h2 {
+  margin-bottom: 20px;
+  font-size:1.5rem !important;
+  color: white !important; /* White text */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.salumeria-reservation-section .form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: white !important; /* White labels */
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.salumeria-reservation-section .form-group input,
+.salumeria-reservation-section .form-group select,
+.salumeria-reservation-section .form-group textarea {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 4px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1) !important; /* Semi-transparent background */
+  color: white !important; /* White text */
+  width: 100%;
+}
+.salumeria-reservation-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Libre Baskerville", serif;
+  /* Force it to break out of any container */
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  left: 0 !important;
+  right: 0 !important;
+  box-sizing: border-box !important;
+}
+  
+  /* Full-width black banner */
+  .reservation-banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  .banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1; /* Make background image subtle */
+  z-index: 1;
+  }
+  
+  .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Strong black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  }
+  
+  .banner-content {
+  text-align: center;
+  color: white;
+  z-index: 3;
+  max-width: 800px;
+  padding: 0 2rem;
+  }
+  
+  .banner-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .banner-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  color: #f0f0f0;
+  line-height: 1.6;
+  font-style: italic;
+  }
+  
+  .reservation-cta-button {
+  background-color: transparent;
+  color: white;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  }
+  
+  .reservation-cta-button:hover {
+  background-color: white;
+  color: #000;
+  }
+  
+
+  .content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  .description-section {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+  margin-bottom: 60px;
+  }
+  
+  .description-section p {
+  margin-bottom: 1.5rem;
+  }
+  
+  /* Contact info - minimal styling */
+  .contact-info-section {
+  margin-bottom: 60px;
+  }
+  
+  .contact-info-section h3 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  .contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  }
+  
+  .contact-item {
+  color: #f0f0f0;
+  font-size: 1rem;
+  }
+  
+  .contact-item strong {
+  color: white;
+  margin-right: 8px;
+  }
+  
+  .contact-item a {
+  color: #f0f0f0;
+  text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+  color: white;
+  text-decoration: underline;
+  }
+  
+  /* Hours section */
+  .hours-section {
+  margin-bottom: 60px;
+  }
+  
+  .hours-section h3 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  .hours-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  }
+  
+  .hours-item {
+  color: #f0f0f0;
+  font-size: 1rem;
+  text-align: center;
+  }
+  
+  .hours-item strong {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  /* Reservation options - if they exist */
+  .reservation-options-section {
+  background: #111;
+  padding: 80px 20px;
+  width: 100%;
+  }
+  
+  .reservation-options-section h3 {
+  text-align: center;
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  .options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  }
+  
+  .option-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  }
+  
+  .option-card h4 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  }
+  
+  .option-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  }
+  
+  .option-button {
+  background-color: transparent;
+  color: white;
+  padding: 12px 24px;
+  border: 1px solid white;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  .option-button:hover {
+  background-color: white;
+  color: #000;
+  }
+  
+  /* Policies section */
+  .policies-section {
+  background: #000;
+  padding: 60px 20px;
+  width: 100%;
+  }
+  
+  .policies-section h3 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  }
+  
+  .policies-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  }
+  
+  .policies-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  text-align: center;
+  }
+  
+  .policies-list li:last-child {
+  border-bottom: none;
+  }
+  
+  /* Form Modal - clean black design */
+  .form-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .form-modal {
+    background: rgba(26, 26, 26, 0.95); /* Dark background instead of white */
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+  
+  .close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  }
+  
+  .close-button:hover {
+  color: #ccc;
+  }
+  
+  
+  .reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  
+  .form-group {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  }
+  
+  .form-modal h2 {
+    margin-bottom: 30px;
+    color: white; /* White text */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: white; /* White labels */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: white; /* White text */
+    width: 100%;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light placeholder text */
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .submit-button {
+  background-color: transparent;
+  color: white;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  }
+  
+  .submit-button:hover {
+  background-color: white;
+  color: #000;
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  
+  @media (max-width: 768px) {
+  .banner-title {
+  font-size: 2.5rem;
+  }
+  
+  .form-row {
+  grid-template-columns: 1fr;
+  }
+  
+  .contact-grid,
+  .hours-grid {
+  flex-direction: column;
+  gap: 20px;
+  }
+  
+  .options-grid {
+  grid-template-columns: 1fr;
+  }
+  
+  .form-modal {
+  padding: 20px;
+  margin: 10px;
+  }
+  }
+/* ADD THESE NEW STYLES */
+.salumeria-reservation-section .reservation-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+}
+
+.salumeria-reservation-section .form-group {
+  margin-bottom: 15px !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  text-align: center !important;
+}
+
+.salumeria-reservation-section .form-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 15px !important;
+  width: 100% !important;
+  max-width: 400px !important;
+}
+
+.salumeria-reservation-section .form-group input,
+.salumeria-reservation-section .form-group select,
+.salumeria-reservation-section .form-group textarea {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.salumeria-reservation-section .submit-button {
+  width: 200px !important;
+  margin: 20px auto 0 auto !important;
+}

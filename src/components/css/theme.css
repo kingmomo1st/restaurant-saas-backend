@@ -1,0 +1,17 @@
+/* theme.css */
+:root {
+    --deep-red: #c0392b;
+    --gold: #f4c542;
+    --cream: #fff8f0;
+    --light-cream: #f5ebdc;
+    --light-gray: #f0f0f0;
+    --charcoal: #2c2c2c;
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --heading-font: 'Cormorant Garamond', serif;
+  
+    /* ✅ Defaults that will be dynamically overridden from CMS */
+    --primary-color: var(--deep-red);
+    --secondary-color: var(--gold);
+    --font-family: var(--body-font);
+    --button-radius: 4px;
+  }

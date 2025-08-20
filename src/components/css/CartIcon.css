@@ -2,64 +2,59 @@
 
 /* General cart icon style */
 .cart-icon {
-  
   position: fixed; /* Fixed position to stay on screen */
   top: 80px; /* Distance from the top */
-  right: 20px; /* Distance from the right */
-  font-size: 24px; /* Icon size */
-  z-index: 1100; /* Ensure it's on top of other elements */
-}
-
-/* Style for the cart icon itself */
-.cart-icon i {
-  color: #333; /* Icon color */
-  font-size: 32px; /* Increase icon size */
+  left: 20px; /* 🎯 MOVED TO LEFT SIDE */
+  z-index: 1100; /* Ensure it’s on top of other elements */
+  }
+  
+  .cart-icon a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  }
+  
+  /* Style for the cart emoji - MUCH BIGGER */
+  .cart-emoji {
+  font-size: 48px; /* 🎯 MUCH BIGGER - was 32px */
   cursor: pointer; /* Make it clickable */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for the cart icon */
-.cart-icon i:hover {
-  color: #f39c12; /* Change color when hovered (e.g., gold) */
-}
-
-/* Cart count badge */
-.cart-count {
-  position: absolute; /* Positioned relative to .cart-icon */
-  top: -8px; /* Slightly above the icon */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3)); /* Add shadow to make it pop */
+  }
+  
+  /* Hover effect for the cart emoji */
+  .cart-emoji:hover {
+  transform: scale(1.2); /* 🎯 Bigger hover effect */
+  }
+  
+  /* Cart count badge - BIGGER TOO */
+  .cart-count {
+  position: absolute; /* Positioned relative to the link */
+  top: -8px; /* Slightly above the emoji */
   right: -8px; /* Slightly to the right */
-  background-color: red; /* Badge background color */
+  background-color: #ff4444; /* Red badge background */
   color: white; /* Badge text color */
   border-radius: 50%; /* Circle shape */
   padding: 0; /* Remove padding for better shape */
-  font-size: 14px; /* Font size for the count */
+  font-size: 16px; /* 🎯 BIGGER FONT - was 14px */
   font-weight: bold; /* Bold font */
-  min-width: 24px; /* Minimum width for a perfect circle */
-  height: 24px; /* Height to match width for a circle */
+  min-width: 28px; /* 🎯 BIGGER BADGE - was 24px */
+  height: 28px; /* Height to match width for a circle */
   display: flex; /* Flexbox to center content */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
-}
-
-/* Optional: Spacing between the cart icon and the cart count */
-.cart-icon i + .cart-count {
-  margin-top: 0; /* Ensure no unnecessary space */
-}
-
-/* Link styling */
-.cart-link {
-  color: #333;
-  text-decoration: none;
-}
-
-/* Optional: Larger cart icon image */
-.cart-icon-img {
-  font-size: 2rem; /* Icon size */
-  color: #333; /* Icon color */
-}
-@media (max-width: 768px) {
-  .cart-icon {
-    top: 100px; /* Allow even more room on mobile */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+  border: 2px solid white; /* White border for contrast */
   }
-}
+  
+  @media (max-width: 768px) {
+  .cart-icon {
+  top: 100px; /* Allow even more room on mobile */
+  left: 15px; /* 🎯 STILL ON LEFT FOR MOBILE */
+  }
+  
+  .cart-emoji {
+  font-size: 40px; /* Still big on mobile */
+  }
+  }

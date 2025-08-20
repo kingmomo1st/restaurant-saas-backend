@@ -1,0 +1,441 @@
+/* AdminAuditLog.css */
+
+.admin-audit-log {
+  padding: 20px;
+  background-color: var(–cream);
+  min-height: 100vh;
+  font-family: var(–body-font);
+  }
+  
+  /* Header Section */
+  .audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .audit-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  letter-spacing: 0.5px;
+  }
+  
+  .header-actions {
+  display: flex;
+  gap: 12px;
+  }
+  
+  .refresh-btn {
+  background-color: var(–olive-green);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .refresh-btn:hover {
+  background-color: var(–deep-red);
+  transform: translateY(-1px);
+  }
+  
+  .cleanup-btn {
+  background-color: var(–deep-red);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .cleanup-btn:hover {
+  background-color: #660000;
+  transform: translateY(-1px);
+  }
+  
+  /* No Franchise Selected State */
+  .no-franchise-selected {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  }
+  
+  .no-franchise-selected h3 {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  font-size: 24px;
+  margin-bottom: 16px;
+  }
+  
+  .no-franchise-selected p {
+  color: var(–charcoal);
+  font-size: 16px;
+  }
+  
+  /* Dashboard Metrics */
+  .dashboard-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .metric-card {
+  text-align: center;
+  flex: 1;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: var(–cream);
+  border: 1px solid var(–gold);
+  }
+  
+  .metric-card strong {
+  display: block;
+  font-family: var(–heading-font);
+  color: var(–deep-red);
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  }
+  
+  .metric-card.today {
+  background-color: #f0f8f0;
+  border-color: var(–olive-green);
+  }
+  
+  .metric-card.week {
+  background-color: #fff8e6;
+  border-color: var(–gold);
+  }
+  
+  .metric-card.errors {
+  background-color: #ffe6e6;
+  border-color: var(–deep-red);
+  }
+  
+  /* Audit Controls */
+  .audit-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .audit-controls input,
+  .audit-controls select {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 180px;
+  background-color: white;
+  font-family: var(–body-font);
+  transition: border-color 0.3s ease;
+  }
+  
+  .audit-controls input:focus,
+  .audit-controls select:focus {
+  outline: none;
+  border-color: var(–gold);
+  box-shadow: 0 0 0 2px rgba(192, 160, 96, 0.2);
+  }
+  
+  .export-btn {
+  background-color: var(–deep-red);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(–body-font);
+  }
+  
+  .export-btn:hover {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  transform: translateY(-1px);
+  }
+  
+  /* No Logs State */
+  .no-logs {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  }
+  
+  .no-logs h3 {
+  color: var(–deep-red);
+  font-family: var(–heading-font);
+  font-size: 22px;
+  margin-bottom: 12px;
+  }
+  
+  .no-logs p {
+  color: var(–charcoal);
+  font-size: 16px;
+  }
+  
+  /* Table Styling */
+  .table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  }
+  
+  .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 1000px;
+  font-family: var(–body-font);
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  }
+  
+  .admin-table th {
+  background-color: var(–cream);
+  font-weight: 600;
+  color: var(–charcoal);
+  font-size: 15px;
+  font-family: var(–heading-font);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  }
+  
+  .admin-table td {
+  color: var(–charcoal);
+  line-height: 1.4;
+  }
+  
+  .admin-table tbody tr:hover {
+  background-color: #fdf5f0;
+  }
+  
+  /* Error Row Styling */
+  .error-row {
+  background-color: #ffe6e6 !important;
+  border-left: 4px solid var(–deep-red);
+  }
+  
+  .error-row:hover {
+  background-color: #ffcccc !important;
+  }
+  
+  /* Time Display */
+  .time-ago {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+  font-style: italic;
+  }
+  
+  /* Action Badges */
+  .action-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  }
+  
+  /* Default action badge */
+  .action-badge {
+  background-color: var(–charcoal);
+  color: white;
+  }
+  
+  /* Specific action types */
+  .action-create,
+  .action-add {
+  background-color: var(–olive-green);
+  color: white;
+  }
+  
+  .action-update,
+  .action-edit,
+  .action-modify {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  }
+  
+  .action-delete,
+  .action-remove,
+  .action-error,
+  .action-failed {
+  background-color: var(–deep-red);
+  color: white;
+  }
+  
+  .action-login,
+  .action-signin,
+  .action-auth {
+  background-color: var(–olive-green);
+  color: white;
+  }
+  
+  .action-logout,
+  .action-signout {
+  background-color: #999;
+  color: white;
+  }
+  
+  .action-export,
+  .action-download {
+  background-color: var(–gold);
+  color: var(–charcoal);
+  }
+  
+  .action-cleanup,
+  .action-maintenance {
+  background-color: var(–charcoal);
+  color: white;
+  }
+  
+  .action-view,
+  .action-read,
+  .action-access {
+  background-color: #708238;
+  color: white;
+  }
+  
+  /* Loading State */
+  .admin-audit-log > p {
+  text-align: center;
+  padding: 40px;
+  color: var(–charcoal);
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid var(–gold);
+  border-radius: 8px;
+  margin: 20px 0;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+  .admin-audit-log {
+  padding: 15px;
+  }
+  
+  .audit-header {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  }
+  
+  .header-actions {
+  flex-direction: column;
+  width: 100%;
+  }
+  
+  .header-actions button {
+  width: 100%;
+  }
+  
+  .dashboard-metrics {
+  flex-direction: column;
+  gap: 15px;
+  }
+  
+  .audit-controls {
+  flex-direction: column;
+  align-items: stretch;
+  }
+  
+  .audit-controls input,
+  .audit-controls select,
+  .audit-controls button {
+  min-width: auto;
+  width: 100%;
+  }
+  
+  .admin-table {
+  font-size: 12px;
+  min-width: 800px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 10px 8px;
+  }
+  
+  .time-ago {
+  display: none;
+  }
+  
+  .action-badge {
+  font-size: 10px;
+  padding: 3px 6px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .admin-audit-log {
+  padding: 10px;
+  }
+  
+  .audit-header h2 {
+  font-size: 22px;
+  }
+  
+  .dashboard-metrics {
+  padding: 15px;
+  }
+  
+  .metric-card {
+  padding: 12px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+  padding: 8px 6px;
+  }
+  }

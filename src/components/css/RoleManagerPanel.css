@@ -1,0 +1,24 @@
+.role-manager-panel {
+    padding: 2rem;
+  }
+  
+  .role-manager-panel h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-manager-panel table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .role-manager-panel th,
+  .role-manager-panel td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .role-manager-panel select {
+    padding: 0.3rem;
+    font-size: 0.95rem;
+  }

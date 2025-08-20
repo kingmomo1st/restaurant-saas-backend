@@ -1,0 +1,145 @@
+/* AboutSalumeria.css — Split Reveal + Diagonal + Zoom */
+
+.about-salumeria-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -50px;
+  box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 80px;
+}
+
+.about-split-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* Left side — Text slides in diagonally from bottom-left + zooms */
+.about-left-side {
+  opacity: 0;
+  transform: translateX(-60px) translateY(40px) scale(0.9);
+  will-change: transform, opacity;
+}
+
+.about-title {
+  font-family: "Times New Roman", serif;
+  font-size: 4rem;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.about-text {
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", serif;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Right side — Image slides in diagonally from bottom-right + zooms */
+.about-right-side {
+  opacity: 0;
+  transform: translateX(60px) translateY(40px) scale(0.85);
+  will-change: transform, opacity;
+}
+
+.about-image {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Responsive Design */
+
+@media (max-width: 968px) {
+  .about-split-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .about-left-side,
+  .about-right-side {
+    transform: translateY(30px) scale(0.9) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-salumeria-section {
+    padding: 80px 20px 60px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -40px;
+  }
+
+  .about-split-container {
+    gap: 3rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .about-image {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-salumeria-section {
+    padding: 60px 15px 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -30px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 300px;
+  }
+}

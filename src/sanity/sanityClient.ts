@@ -1,10 +1,13 @@
-import { createClient } from '@sanity/client';
+import { createClient } from "@sanity/client";
 
 const sanityClient = createClient({
-  projectId: '80utnltr', // double-check this matches your actual Sanity project ID
-  dataset: 'production',
-  apiVersion: '2023-01-01', // make sure this matches what's in the error URL
-  useCdn: true,
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID, // ✅ Vite uses import.meta.env
+  dataset: "production",
+  apiVersion: "2023-01-01",
+  useCdn: false,
+  token: import.meta.env.VITE_SANITY_WRITE_TOKEN, // ✅ also Vite-style
 });
+
+
 
 export default sanityClient;
